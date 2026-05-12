@@ -353,6 +353,126 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
   .meld-sticky-cta { flex: 1; justify-content: center; }
   .meld-sticky-bar-inner { padding: 12px 20px; }
 }
+
+/* ====== CART DRAWER ====== */
+.meld-cart-overlay {
+  position:fixed; inset:0; background:rgba(26,26,26,0.5);
+  z-index:1000; opacity:0; pointer-events:none;
+  transition:opacity 0.25s;
+}
+.meld-cart-overlay.open { opacity:1; pointer-events:all; }
+
+.meld-cart-drawer {
+  position:fixed; top:0; right:0; height:100%;
+  width:420px; max-width:100vw;
+  background:var(--meld-paper);
+  border-left:1px solid var(--meld-border);
+  z-index:1001;
+  transform:translateX(100%);
+  transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  display:flex; flex-direction:column; overflow:hidden;
+}
+.meld-cart-drawer.open { transform:translateX(0); }
+
+.meld-cart-head {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:20px 24px; border-bottom:1px solid var(--meld-border);
+  background:var(--meld-ink); flex-shrink:0;
+}
+.meld-cart-title {
+  font-family:'IBM Plex Mono',monospace; font-size:13px;
+  font-weight:500; letter-spacing:0.12em; text-transform:uppercase;
+  color:var(--meld-paper);
+}
+.meld-cart-close {
+  background:none; border:none; color:var(--meld-paper);
+  font-size:28px; cursor:pointer; padding:0; line-height:1;
+  opacity:0.7; transition:opacity 0.15s;
+}
+.meld-cart-close:hover { opacity:1; }
+
+.meld-cart-body { flex:1; overflow-y:auto; padding:0 24px; }
+
+.meld-cart-item {
+  display:flex; align-items:flex-start; gap:14px;
+  padding:20px 0; border-bottom:1px solid var(--meld-border);
+}
+.meld-cart-item-swatch {
+  width:52px; height:52px; flex-shrink:0;
+  border:1px solid rgba(0,0,0,0.12);
+}
+.meld-cart-item-info { flex:1; min-width:0; }
+.meld-cart-item-name {
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:16px; font-weight:600; color:var(--meld-ink); margin-bottom:3px;
+}
+.meld-cart-item-variant {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px; letter-spacing:0.12em; color:var(--meld-fg2);
+  text-transform:uppercase; margin-bottom:12px;
+}
+.meld-cart-item-controls { display:flex; align-items:center; gap:10px; }
+.meld-cart-qty-btn {
+  width:28px; height:28px; background:none;
+  border:1px solid var(--meld-border); cursor:pointer;
+  font-size:14px; display:flex; align-items:center; justify-content:center;
+  color:var(--meld-ink); flex-shrink:0; transition:border-color 0.15s;
+}
+.meld-cart-qty-btn:hover { border-color:var(--meld-ink); }
+.meld-cart-qty {
+  font-family:'IBM Plex Mono',monospace; font-size:13px;
+  min-width:24px; text-align:center; color:var(--meld-ink);
+}
+.meld-cart-remove {
+  background:none; border:none; cursor:pointer;
+  color:var(--meld-fg2); font-family:'IBM Plex Mono',monospace;
+  font-size:10px; letter-spacing:0.1em; text-transform:uppercase;
+  padding:0; text-decoration:underline; transition:color 0.15s;
+}
+.meld-cart-remove:hover { color:var(--meld-ink); }
+.meld-cart-item-price {
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:20px; font-weight:600; color:var(--meld-ink);
+  flex-shrink:0; align-self:flex-start; padding-top:2px;
+}
+
+.meld-cart-empty {
+  flex:1; display:flex; align-items:center; justify-content:center;
+  font-family:'IBM Plex Mono',monospace; font-size:12px;
+  color:var(--meld-fg2); letter-spacing:0.08em;
+}
+
+.meld-cart-foot {
+  padding:20px 24px; border-top:1px solid var(--meld-border); flex-shrink:0;
+}
+.meld-cart-subtotal {
+  display:flex; justify-content:space-between; align-items:baseline;
+  margin-bottom:6px;
+}
+.meld-cart-subtotal > span:first-child {
+  font-family:'IBM Plex Mono',monospace; font-size:11px;
+  letter-spacing:0.12em; text-transform:uppercase; color:var(--meld-fg2);
+}
+.meld-cart-subtotal > span:last-child {
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:26px; font-weight:600; color:var(--meld-ink);
+}
+.meld-cart-shipping {
+  font-family:'IBM Plex Mono',monospace; font-size:11px;
+  color:var(--meld-fg2); margin-bottom:16px; letter-spacing:0.06em;
+}
+.meld-cart-checkout {
+  width:100%; height:52px; background:var(--meld-red);
+  color:var(--meld-paper); border:none;
+  font-family:'IBM Plex Mono',monospace; font-size:13px;
+  font-weight:500; letter-spacing:0.1em; text-transform:uppercase;
+  cursor:pointer; transition:background 0.18s;
+}
+.meld-cart-checkout:hover { background:#8e2718; }
+
+@media (max-width:480px) {
+  .meld-cart-drawer { width:100vw; }
+}
 </style>
 </head>
 <body>
@@ -363,7 +483,7 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
     <a href="/" class="meld-nav-wordmark" aria-label="MELD home">MELD<span class="meld-nav-dot">.</span></a>
     <div class="meld-nav-right">
       <a href="#how-it-works" class="meld-nav-link">How it works</a>
-      <a href="https://qs3wnm-af.myshopify.com/cart" class="meld-nav-cart" aria-label="Cart" id="meldNavCart" target="_blank" rel="noopener">
+      <a href="#" class="meld-nav-cart" aria-label="Cart" id="meldNavCart">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
         <span id="meldNavCartLabel">Cart</span>
       </a>
@@ -898,6 +1018,216 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
 </div>
 
 <script>
+var variantData = {
+  'a-Black':       { id:'53739435065712', price:46, label:'Buy 2 Get 1 Free', shade:'Black',       swatch:'#1A1200' },
+  'a-Dark Brown':  { id:'53739435098480', price:46, label:'Buy 2 Get 1 Free', shade:'Dark Brown',  swatch:'#3D2210' },
+  'a-Light Brown': { id:'53739435131248', price:46, label:'Buy 2 Get 1 Free', shade:'Light Brown', swatch:'#7B4A25' },
+  'a-Blonde':      { id:'53739435164016', price:46, label:'Buy 2 Get 1 Free', shade:'Blonde',      swatch:'#C19A6B' },
+  'b-Black':       { id:'53739434803568', price:35, label:'1 Jar',            shade:'Black',       swatch:'#1A1200' },
+  'b-Dark Brown':  { id:'53739434967408', price:35, label:'1 Jar',            shade:'Dark Brown',  swatch:'#3D2210' },
+  'b-Light Brown': { id:'53739435000176', price:35, label:'1 Jar',            shade:'Light Brown', swatch:'#7B4A25' },
+  'b-Blonde':      { id:'53739435032944', price:35, label:'1 Jar',            shade:'Blonde',      swatch:'#C19A6B' }
+};
+
+var MeldCart = {
+  STORAGE_KEY: 'meld_cart_v1',
+  items: [],
+
+  init: function() {
+    try { this.items = JSON.parse(localStorage.getItem(this.STORAGE_KEY)) || []; } catch(e) { this.items = []; }
+    this.bindUI();
+    this.render();
+  },
+
+  save: function() {
+    try { localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.items)); } catch(e) {} },
+
+  add: function(planKey, shadeName) {
+    var key = planKey + '-' + shadeName;
+    var data = variantData[key];
+    if (!data) return;
+    var existing = null;
+    for (var i = 0; i < this.items.length; i++) {
+      if (this.items[i].key === key) { existing = this.items[i]; break; }
+    }
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      this.items.push({ key:key, id:data.id, price:data.price, label:data.label, shade:data.shade, swatch:data.swatch, qty:1 });
+    }
+    this.save();
+    this.render();
+    this.open();
+  },
+
+  remove: function(key) {
+    this.items = this.items.filter(function(i) { return i.key !== key; });
+    this.save();
+    this.render();
+  },
+
+  updateQty: function(key, delta) {
+    for (var i = 0; i < this.items.length; i++) {
+      if (this.items[i].key === key) {
+        this.items[i].qty = Math.max(0, this.items[i].qty + delta);
+        if (this.items[i].qty === 0) { this.items.splice(i, 1); }
+        break;
+      }
+    }
+    this.save();
+    this.render();
+  },
+
+  getTotal: function() {
+    var t = 0;
+    for (var i = 0; i < this.items.length; i++) { t += this.items[i].price * this.items[i].qty; }
+    return t;
+  },
+
+  getTotalQty: function() {
+    var q = 0;
+    for (var i = 0; i < this.items.length; i++) { q += this.items[i].qty; }
+    return q;
+  },
+
+  getCheckoutUrl: function() {
+    if (!this.items.length) return null;
+    return 'https://qs3wnm-af.myshopify.com/cart/' +
+      this.items.map(function(i) { return i.id + ':' + i.qty; }).join(',');
+  },
+
+  open: function() {
+    var d = document.getElementById('meldCartDrawer');
+    var o = document.getElementById('meldCartOverlay');
+    if (d) d.classList.add('open');
+    if (o) o.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  },
+
+  close: function() {
+    var d = document.getElementById('meldCartDrawer');
+    var o = document.getElementById('meldCartOverlay');
+    if (d) d.classList.remove('open');
+    if (o) o.classList.remove('open');
+    document.body.style.overflow = '';
+  },
+
+  render: function() {
+    var qty   = this.getTotalQty();
+    var total = this.getTotal();
+    var countEl = document.getElementById('meldCartCount');
+    if (countEl) countEl.textContent = qty;
+    var labelEl = document.getElementById('meldNavCartLabel');
+    if (labelEl) labelEl.textContent = qty > 0 ? 'Cart (' + qty + ')' : 'Cart';
+    var subtotalEl = document.getElementById('meldCartSubtotal');
+    if (subtotalEl) subtotalEl.textContent = '$' + total;
+
+    var bodyEl  = document.getElementById('meldCartBody');
+    var emptyEl = document.getElementById('meldCartEmpty');
+    var footEl  = document.getElementById('meldCartFoot');
+
+    if (!this.items.length) {
+      if (bodyEl)  bodyEl.innerHTML = '';
+      if (emptyEl) emptyEl.style.display = 'flex';
+      if (footEl)  footEl.style.display  = 'none';
+      return;
+    }
+    if (emptyEl) emptyEl.style.display = 'none';
+    if (footEl)  footEl.style.display  = '';
+
+    if (bodyEl) {
+      var html = '';
+      for (var i = 0; i < this.items.length; i++) {
+        var item = this.items[i];
+        html += '<div class="meld-cart-item">' +
+          '<div class="meld-cart-item-swatch" style="background:' + item.swatch + '"></div>' +
+          '<div class="meld-cart-item-info">' +
+            '<div class="meld-cart-item-name">MELD Hair Density Filler</div>' +
+            '<div class="meld-cart-item-variant">' + item.shade + ' / ' + item.label + '</div>' +
+            '<div class="meld-cart-item-controls">' +
+              '<button class="meld-cart-qty-btn" data-key="' + item.key + '" data-delta="-1" aria-label="Decrease">&#8722;</button>' +
+              '<span class="meld-cart-qty">' + item.qty + '</span>' +
+              '<button class="meld-cart-qty-btn" data-key="' + item.key + '" data-delta="1" aria-label="Increase">&#43;</button>' +
+              '<button class="meld-cart-remove" data-key="' + item.key + '">Remove</button>' +
+            '</div>' +
+          '</div>' +
+          '<div class="meld-cart-item-price">$' + (item.price * item.qty) + '</div>' +
+        '</div>';
+      }
+      bodyEl.innerHTML = html;
+
+      var qtyBtns = bodyEl.querySelectorAll('.meld-cart-qty-btn');
+      for (var j = 0; j < qtyBtns.length; j++) {
+        (function(btn) {
+          btn.addEventListener('click', function() {
+            MeldCart.updateQty(this.dataset.key, parseInt(this.dataset.delta, 10));
+          });
+        })(qtyBtns[j]);
+      }
+      var removeBtns = bodyEl.querySelectorAll('.meld-cart-remove');
+      for (var k = 0; k < removeBtns.length; k++) {
+        (function(btn) {
+          btn.addEventListener('click', function() { MeldCart.remove(this.dataset.key); });
+        })(removeBtns[k]);
+      }
+    }
+  },
+
+  bindUI: function() {
+    var self = this;
+    var overlay = document.getElementById('meldCartOverlay');
+    if (overlay) overlay.addEventListener('click', function() { self.close(); });
+    var closeBtn = document.getElementById('meldCartClose');
+    if (closeBtn) closeBtn.addEventListener('click', function() { self.close(); });
+    var checkoutBtn = document.getElementById('meldCartCheckoutBtn');
+    if (checkoutBtn) checkoutBtn.addEventListener('click', function() {
+      var url = self.getCheckoutUrl();
+      if (url) window.location.href = url;
+    });
+    var navCart = document.getElementById('meldNavCart');
+    if (navCart) {
+      navCart.removeAttribute('href');
+      navCart.style.cursor = 'pointer';
+      navCart.addEventListener('click', function(e) { e.preventDefault(); self.open(); });
+    }
+    function getSelection() {
+      var planBtn   = document.querySelector('.meld-wrap .plan-btn.selected');
+      var planKey   = planBtn   ? (planBtn.dataset.plan   || 'a')     : 'a';
+      var swatchBtn = document.querySelector('.meld-wrap .color-swatch.active');
+      var shadeName = swatchBtn ? (swatchBtn.dataset.name || 'Black') : 'Black';
+      return { planKey: planKey, shadeName: shadeName };
+    }
+    var ctaBtn = document.getElementById('meldCtaBtn');
+    if (ctaBtn) ctaBtn.addEventListener('click', function() {
+      var sel = getSelection(); self.add(sel.planKey, sel.shadeName);
+    });
+    var stickyBtn = document.getElementById('meldStickyCta');
+    if (stickyBtn) stickyBtn.addEventListener('click', function() {
+      var sel = getSelection(); self.add(sel.planKey, sel.shadeName);
+    });
+    var ctaPrice       = document.getElementById('meldCtaPrice');
+    var stickyCtaPrice = document.getElementById('meldStickyCtaPrice');
+    var planData       = { a: '$46', b: '$35' };
+    document.querySelectorAll('.meld-wrap .plan-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.meld-wrap .plan-btn').forEach(function(b) { b.classList.remove('selected'); });
+        this.classList.add('selected');
+        var key = this.dataset.plan;
+        if (ctaPrice)       ctaPrice.textContent       = planData[key] || '';
+        if (stickyCtaPrice) stickyCtaPrice.textContent = planData[key] || '';
+      });
+    });
+    var colorNameEl = document.getElementById('meldSelectedColorName');
+    document.querySelectorAll('.meld-wrap .color-swatch').forEach(function(sw) {
+      sw.addEventListener('click', function() {
+        document.querySelectorAll('.meld-wrap .color-swatch').forEach(function(s) { s.classList.remove('active'); });
+        this.classList.add('active');
+        if (colorNameEl) colorNameEl.textContent = this.dataset.name || '';
+      });
+    });
+  }
+};
+
 (function() {
   /* FAQ accordion */
   var triggers = document.querySelectorAll('.meld-wrap .faq-trigger');
@@ -920,56 +1250,8 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
     });
   });
 
-  /* Color swatch */
-  var colorNameEl = document.getElementById('meldSelectedColorName');
-  document.querySelectorAll('.meld-wrap .color-swatch').forEach(function(sw) {
-    sw.addEventListener('click', function() {
-      document.querySelectorAll('.meld-wrap .color-swatch').forEach(function(s) { s.classList.remove('active'); });
-      this.classList.add('active');
-      if (colorNameEl) colorNameEl.textContent = this.dataset.name || '';
-    });
-  });
-
-  /* Plan selector */
-  var ctaPrice = document.getElementById('meldCtaPrice');
-  var planData = { a: '$46', b: '$35' };
-  var checkoutUrls = {
-    'a-Black':       'https://qs3wnm-af.myshopify.com/cart/53739435065712:1',
-    'a-Dark Brown':  'https://qs3wnm-af.myshopify.com/cart/53739435098480:1',
-    'a-Light Brown': 'https://qs3wnm-af.myshopify.com/cart/53739435131248:1',
-    'a-Blonde':      'https://qs3wnm-af.myshopify.com/cart/53739435164016:1',
-    'b-Black':       'https://qs3wnm-af.myshopify.com/cart/53739434803568:1',
-    'b-Dark Brown':  'https://qs3wnm-af.myshopify.com/cart/53739434967408:1',
-    'b-Light Brown': 'https://qs3wnm-af.myshopify.com/cart/53739435000176:1',
-    'b-Blonde':      'https://qs3wnm-af.myshopify.com/cart/53739435032944:1'
-  };
-  var stickyCtaPriceEl = document.getElementById('meldStickyCtaPrice');
-  document.querySelectorAll('.meld-wrap .plan-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.meld-wrap .plan-btn').forEach(function(b) { b.classList.remove('selected'); });
-      this.classList.add('selected');
-      var key = this.dataset.plan;
-      if (ctaPrice) ctaPrice.textContent = planData[key] || '';
-      if (stickyCtaPriceEl) stickyCtaPriceEl.textContent = planData[key] || '';
-    });
-  });
-
-  /* Cart routing — reads plan + selected shade, routes to correct Shopify variant */
-  function getCheckoutUrl() {
-    var planBtn = document.querySelector('.meld-wrap .plan-btn.selected');
-    var planKey = planBtn ? (planBtn.dataset.plan || 'a') : 'a';
-    var swatchBtn = document.querySelector('.meld-wrap .color-swatch.active');
-    var shadeName = swatchBtn ? (swatchBtn.dataset.name || 'Black') : 'Black';
-    return checkoutUrls[planKey + '-' + shadeName] || checkoutUrls['a-Black'];
-  }
-  var heroCta = document.getElementById('meldCtaBtn');
-  if (heroCta) heroCta.addEventListener('click', function() {
-    window.open(getCheckoutUrl(), '_blank');
-  });
-  var stickyCta = document.getElementById('meldStickyCta');
-  if (stickyCta) stickyCta.addEventListener('click', function() {
-    window.open(getCheckoutUrl(), '_blank');
-  });
+  /* Cart */
+  MeldCart.init();
 
   /* Color guide modal */
   var modal   = document.getElementById('meldColorModal');
@@ -995,6 +1277,24 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
   }
 })();
 </script>
+
+<!-- MELD CART DRAWER -->
+<div class="meld-cart-overlay" id="meldCartOverlay"></div>
+<aside class="meld-cart-drawer" id="meldCartDrawer" aria-label="Shopping cart" role="dialog">
+  <div class="meld-cart-head">
+    <span class="meld-cart-title">Cart (<span id="meldCartCount">0</span>)</span>
+    <button class="meld-cart-close" id="meldCartClose" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="meld-cart-body" id="meldCartBody"></div>
+  <div class="meld-cart-empty" id="meldCartEmpty" style="display:none">Your cart is empty.</div>
+  <div class="meld-cart-foot" id="meldCartFoot" style="display:none">
+    <div class="meld-cart-subtotal">
+      <span>Subtotal</span><span id="meldCartSubtotal">$0</span>
+    </div>
+    <p class="meld-cart-shipping">Free shipping on all US orders</p>
+    <button class="meld-cart-checkout" id="meldCartCheckoutBtn">Proceed to Checkout</button>
+  </div>
+</aside>
 
 </body>
 </html>
