@@ -357,17 +357,17 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
 /* ====== CART DRAWER ====== */
 .meld-cart-overlay {
   position:fixed; inset:0; background:rgba(26,26,26,0.5);
-  z-index:1000; opacity:0; pointer-events:none;
+  z-index:10000; opacity:0; pointer-events:none;
   transition:opacity 0.25s;
 }
-.meld-cart-overlay.open { opacity:1; pointer-events:all; }
+.meld-cart-overlay.open { opacity:1; pointer-events:auto; }
 
 .meld-cart-drawer {
   position:fixed; top:0; right:0; height:100%;
   width:420px; max-width:100vw;
   background:var(--meld-paper);
   border-left:1px solid var(--meld-border);
-  z-index:1001;
+  z-index:10001;
   transform:translateX(100%);
   transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
   display:flex; flex-direction:column; overflow:hidden;
@@ -487,7 +487,7 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
       <a href="#how-it-works" class="meld-nav-link">How it works</a>
       <a href="#" class="meld-nav-cart" aria-label="Cart" id="meldNavCart">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-        <span id="meldNavCartLabel">Cart</span>
+        <span id="meldNavCartLabel"></span>
       </a>
     </div>
   </div>
@@ -1020,11 +1020,11 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
 </div>
 
 <!-- MELD CART DRAWER — must be before <script> so bindUI() finds these elements -->
-<div class="meld-cart-overlay" id="meldCartOverlay"></div>
+<div class="meld-cart-overlay" id="meldCartOverlay" onclick="MeldCart.close()"></div>
 <aside class="meld-cart-drawer" id="meldCartDrawer" aria-label="Shopping cart" role="dialog">
   <div class="meld-cart-head">
     <span class="meld-cart-title">Your Cart</span>
-    <button class="meld-cart-close" id="meldCartClose" aria-label="Close cart">&times;</button>
+    <button class="meld-cart-close" id="meldCartClose" aria-label="Close cart" onclick="MeldCart.close()">&times;</button>
   </div>
   <div class="meld-cart-body" id="meldCartBody"></div>
   <div class="meld-cart-empty" id="meldCartEmpty" style="display:none">Your cart is empty.</div>
@@ -1138,7 +1138,7 @@ var MeldCart = {
     var countEl = document.getElementById('meldCartCount');
     if (countEl) countEl.textContent = qty;
     var labelEl = document.getElementById('meldNavCartLabel');
-    if (labelEl) labelEl.textContent = qty > 0 ? 'Cart (' + qty + ')' : 'Cart';
+    if (labelEl) labelEl.textContent = qty > 0 ? '(' + qty + ')' : '';
     var subtotalEl = document.getElementById('meldCartSubtotal');
     if (subtotalEl) subtotalEl.textContent = '$' + total;
 
