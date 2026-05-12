@@ -15,6 +15,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
+   ROOT TOKENS — shared by cart drawer (outside .meld-wrap)
+   and the GHL global CSS injection. Keep in sync.
+============================================================ */
+:root {
+  --meld-ink:    #1A1A1A;
+  --meld-paper:  #EFE9DB;
+  --meld-dim:    #D9D2C3;
+  --meld-red:    #B2321E;
+  --meld-brass:  #A07646;
+  --meld-bg:     #FFFFFF;
+  --meld-alt:    #F9F8F6;
+  --meld-fg:     #1A1A1A;
+  --meld-fg2:    #3A3A3A;
+  --meld-border: #E5E0D9;
+}
+
+/* ============================================================
    MELD SITE HEADER — standalone nav
 ============================================================ */
 .meld-site-header {
