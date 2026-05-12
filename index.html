@@ -398,8 +398,10 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
   padding:20px 0; border-bottom:1px solid var(--meld-border);
 }
 .meld-cart-item-swatch {
-  width:52px; height:52px; flex-shrink:0;
-  border:1px solid rgba(0,0,0,0.12);
+  width:44px; height:44px; flex-shrink:0;
+  border-radius:50%;
+  border:2px solid rgba(255,255,255,0.2);
+  box-shadow:0 0 0 1px rgba(0,0,0,0.15);
 }
 .meld-cart-item-info { flex:1; min-width:0; }
 .meld-cart-item-name {
@@ -1017,6 +1019,24 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
   </div>
 </div>
 
+<!-- MELD CART DRAWER — must be before <script> so bindUI() finds these elements -->
+<div class="meld-cart-overlay" id="meldCartOverlay"></div>
+<aside class="meld-cart-drawer" id="meldCartDrawer" aria-label="Shopping cart" role="dialog">
+  <div class="meld-cart-head">
+    <span class="meld-cart-title">Your Cart</span>
+    <button class="meld-cart-close" id="meldCartClose" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="meld-cart-body" id="meldCartBody"></div>
+  <div class="meld-cart-empty" id="meldCartEmpty" style="display:none">Your cart is empty.</div>
+  <div class="meld-cart-foot" id="meldCartFoot" style="display:none">
+    <div class="meld-cart-subtotal">
+      <span>Subtotal</span><span id="meldCartSubtotal">$0</span>
+    </div>
+    <p class="meld-cart-shipping">Free shipping on all US orders</p>
+    <button class="meld-cart-checkout" id="meldCartCheckoutBtn">Proceed to Checkout</button>
+  </div>
+</aside>
+
 <script>
 var variantData = {
   'a-Black':       { id:'53739435065712', price:46, label:'Buy 2 Get 1 Free', shade:'Black',       swatch:'#1A1200' },
@@ -1278,23 +1298,6 @@ var MeldCart = {
 })();
 </script>
 
-<!-- MELD CART DRAWER -->
-<div class="meld-cart-overlay" id="meldCartOverlay"></div>
-<aside class="meld-cart-drawer" id="meldCartDrawer" aria-label="Shopping cart" role="dialog">
-  <div class="meld-cart-head">
-    <span class="meld-cart-title">Cart (<span id="meldCartCount">0</span>)</span>
-    <button class="meld-cart-close" id="meldCartClose" aria-label="Close cart">&times;</button>
-  </div>
-  <div class="meld-cart-body" id="meldCartBody"></div>
-  <div class="meld-cart-empty" id="meldCartEmpty" style="display:none">Your cart is empty.</div>
-  <div class="meld-cart-foot" id="meldCartFoot" style="display:none">
-    <div class="meld-cart-subtotal">
-      <span>Subtotal</span><span id="meldCartSubtotal">$0</span>
-    </div>
-    <p class="meld-cart-shipping">Free shipping on all US orders</p>
-    <button class="meld-cart-checkout" id="meldCartCheckoutBtn">Proceed to Checkout</button>
-  </div>
-</aside>
 
 </body>
 </html>
