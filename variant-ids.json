@@ -1,0 +1,56 @@
+{
+  "_comment": "MELD Shopify variant IDs. Generated 2026-05-22 from Shopify Admin API. Keep in sync with Shopify catalog. Used by storefront JS to map shade+bundle selection to checkout variant ID, and by n8n workflows for inventory/order matching.",
+  "_product_id": "gid://shopify/Product/15108859887984",
+  "_product_handle": "meld-hair-density-filler",
+  "_shades": {
+    "black": { "label": "Black", "hex": "#1A1200" },
+    "darkBrown": { "label": "Dark Brown", "hex": "#3D2210" },
+    "lightBrown": { "label": "Light Brown", "hex": "#7B4A25" },
+    "blonde": { "label": "Blonde", "hex": "#C19A6B" }
+  },
+  "single": {
+    "_label": "1 Jar (1 Month Supply)",
+    "_price": 35,
+    "_compareAt": 39,
+    "_weightOz": 4,
+    "black": {
+      "variantId": "gid://shopify/ProductVariant/53739434803568",
+      "sku": "MELD-HDF-BLK-1J"
+    },
+    "darkBrown": {
+      "variantId": "gid://shopify/ProductVariant/53739434967408",
+      "sku": "MELD-HDF-DBR-1J"
+    },
+    "lightBrown": {
+      "variantId": "gid://shopify/ProductVariant/53739435000176",
+      "sku": "MELD-HDF-LBR-1J"
+    },
+    "blonde": {
+      "variantId": "gid://shopify/ProductVariant/53739435032944",
+      "sku": "MELD-HDF-BLN-1J"
+    }
+  },
+  "b2g1": {
+    "_label": "Buy 2 Get 1 Free (3 Month Supply)",
+    "_price": 46,
+    "_compareAt": 117,
+    "_weightOz": 12,
+    "_math": "Pay for 2 jars at $23 each, receive 3 jars",
+    "black": {
+      "variantId": "gid://shopify/ProductVariant/53739435065712",
+      "sku": "MELD-HDF-BLK-3J"
+    },
+    "darkBrown": {
+      "variantId": "gid://shopify/ProductVariant/53739435098480",
+      "sku": "MELD-HDF-DBR-3J"
+    },
+    "lightBrown": {
+      "variantId": "gid://shopify/ProductVariant/53739435131248",
+      "sku": "MELD-HDF-LBR-3J"
+    },
+    "blonde": {
+      "variantId": "gid://shopify/ProductVariant/53739435164016",
+      "sku": "MELD-HDF-BLN-3J"
+    }
+  }
+}
