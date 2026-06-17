@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="noindex, nofollow">
   <title>MELD: Hair Density Filler</title>
   <meta name="description" content="MELD is a waterproof, sweatproof hair density filler. Apply in seconds, holds through workouts and rain.">
   <meta property="og:title" content="MELD: Hair Density Filler">
   <meta property="og:description" content="Waterproof, sweatproof hair density filler. Apply in seconds, holds through workouts and rain.">
-  <meta property="og:image" content="https://meldhair.com/images/og-image.webp">
+  <meta property="og:image" content="images/og-image.webp">
   <meta property="og:type" content="product">
-  <meta property="og:url" content="https://meldhair.com/">
-  <link rel="canonical" href="https://meldhair.com/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://meldhair.com/images/og-image.webp">
+  <meta name="twitter:image" content="images/og-image.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
-  <script src="/consent.js" defer></script>
   <style>
     /* ============================================================
        DESIGN TOKENS - v2.1 ARCHIVE (unchanged)
@@ -454,36 +451,6 @@
       .compare-table thead th, .compare-table tbody td { padding: 10px 12px; font-size: 13px; }
     }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "MELD Hair Density Filler",
-    "description": "Waterproof, sweatproof keratin micro-fibre hair density filler for men. Covers thinning areas in seconds, holds for 48 hours, washes out with shampoo.",
-    "brand": { "@type": "Brand", "name": "MELD" },
-    "image": "https://meldhair.com/images/og-image.webp",
-    "url": "https://meldhair.com/",
-    "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "35",
-      "highPrice": "46",
-      "offerCount": "2",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "MELD",
-    "url": "https://meldhair.com",
-    "email": "hello@meldhair.com",
-    "logo": "https://meldhair.com/images/og-image.webp",
-    "sameAs": []
-  }
-  </script>
 </head>
 <body>
 
@@ -684,6 +651,7 @@
       </div>
 
       <!-- Add to Cart -->
+      <!-- TODO: wire href / onclick to GHL checkout before paid traffic -->
       <button class="buybox-cta" id="ctaBtn" aria-label="Add to cart">
         <span>Add to Cart</span>
         <span class="buybox-cta-sep">|</span>
@@ -1027,6 +995,7 @@
     <div class="get-meld-inner">
       <h2 class="section-headline">Ready to lock in your supply?</h2>
       <p class="section-sub" style="margin-bottom:36px;">Most customers order the 3-jar bundle and never reorder manually.</p>
+      <!-- TODO: wire to GHL/Stripe checkout before paid traffic -->
       <a class="btn-primary" id="orderCtaBtn" role="button" tabindex="0">Order 3 Jars · $46</a>
       <p class="get-meld-footnote">60-day money-back. Free Shade Swap.</p>
     </div>
@@ -1245,20 +1214,19 @@
         <p class="footer-col-head">Support</p>
         <ul class="footer-links">
           <li><a href="mailto:hello@meldhair.com">hello@meldhair.com</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/#order">Shade Guide</a></li>
-          <li><a href="/refund-policy#shade-swap">Free Shade Swap</a></li>
-          <li><a href="/refund-policy">Refund Policy</a></li>
-          <li><a href="/shipping-policy">Shipping Policy</a></li>
+          <li><a href="#">Shade Guide</a></li>
+          <li><a href="#">Free Shade Swap</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">Shipping Policy</a></li>
         </ul>
       </div>
       <div>
         <p class="footer-col-head">Legal</p>
         <ul class="footer-links">
-          <li><a href="/privacy">Privacy Policy</a></li>
-          <li><a href="/terms">Terms of Service</a></li>
-          <li><a href="/privacy#ca-privacy-rights">CA Privacy Rights</a></li>
-          <li><a href="/privacy#do-not-sell">Do Not Sell My Info</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">CA Privacy Rights</a></li>
+          <li><a href="#">Do Not Sell My Info</a></li>
         </ul>
       </div>
     </div>
@@ -1271,6 +1239,7 @@
           © 2026 MELD Hair LLC · All rights reserved
         </p>
       </div>
+      <p class="footer-private">Private Preview · noindex, nofollow active until launch</p>
     </div>
   </div>
 </footer>
