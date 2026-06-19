@@ -10,10 +10,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#1A1A1A">
+  <link rel="preload" as="image" href="/images/pack-2-angle.webp" type="image/webp" fetchpriority="high">
   <meta name="robots" content="index, follow">
-  <title>MELD: Hair Density Filler for Men | Hairline Powder for Thinning</title>
+  <title>MELD | Hair Powder That Covers Thinning Hair in Seconds</title>
   <meta name="description" content="MELD is a hair density filler and hairline powder for men. Cover thinning and bald spots in seconds for thicker-looking hair. Sweat-resistant, long-lasting.">
-  <meta property="og:title" content="MELD: Hair Density Filler for Men | Hairline Powder for Thinning">
+  <meta property="og:title" content="MELD | Hair Powder That Covers Thinning Hair in Seconds">
   <meta property="og:description" content="A hair density filler and hairline powder for men. Cover thinning areas in seconds for thicker-looking, fuller-looking hair. Sweat-resistant and long-lasting.">
   <meta property="og:image" content="https://meldhair.com/images/og-image.webp">
   <meta property="og:type" content="product">
@@ -23,7 +24,9 @@
   <meta name="twitter:image" content="https://meldhair.com/images/og-image.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet"></noscript>
   <script src="/consent.js" defer></script>
   <style>
     /* ============================================================
@@ -468,16 +471,74 @@
     "name": "MELD Hair Density Filler",
     "description": "Long-lasting, sweat-resistant hair density filler for men. Covers thinning areas in seconds and washes out with any shampoo.",
     "brand": { "@type": "Brand", "name": "MELD" },
-    "image": "https://meldhair.com/images/og-image.webp",
+    "mpn": "MELD-HDF",
+    "image": [
+      "https://meldhair.com/images/og-image.webp",
+      "https://meldhair.com/images/pack-2-angle.webp",
+      "https://meldhair.com/images/main-3pack.webp",
+      "https://meldhair.com/images/jar-5-macro.webp"
+    ],
     "url": "https://meldhair.com/",
-    "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "35",
-      "highPrice": "46",
-      "offerCount": "2",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "1 Jar (1 Month Supply)",
+        "sku": "MELD-HDF-1J",
+        "price": "35.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "url": "https://meldhair.com/",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 60,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Buy 2 Get 1 Free (3 Month Supply)",
+        "sku": "MELD-HDF-3J",
+        "price": "46.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "url": "https://meldhair.com/",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "USD" },
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "US" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 5, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 60,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      }
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -485,9 +546,19 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "MELD",
+    "legalName": "Meld Hair LLC",
+    "description": "MELD makes hair density filler for men: a fine micro-powder that covers thinning areas and bald spots for the look of fuller, denser hair in seconds.",
     "url": "https://meldhair.com",
     "email": "hello@meldhair.com",
     "logo": "https://meldhair.com/images/og-image.webp",
+    "foundingDate": "2026",
+    "knowsAbout": ["hair density filler", "hair fibers for men", "hairline powder", "thinning hair coverage"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "hello@meldhair.com",
+      "availableLanguage": "English"
+    },
     "sameAs": []
   }
   </script>
