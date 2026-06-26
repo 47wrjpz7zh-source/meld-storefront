@@ -90,9 +90,20 @@
     .section-sub { font-family: var(--font-mono); font-size: var(--fs-caption); color: var(--body-fg-2); line-height: 1.75; max-width: 500px; margin: 0 auto; }
 
     /* ============================================================
+       PROMO BAR - TOP ANNOUNCEMENT (single source of truth; mirrors sticky bar)
+    ============================================================ */
+    .promo-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 101; height: 36px; background: var(--red); display: flex; align-items: center; justify-content: center; padding: 0 16px; }
+    .promo-bar-inner { display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.06em; color: #FFFFFF; text-align: center; }
+    .promo-bar-text strong { font-weight: 600; }
+    .promo-bar-countdown { font-variant-numeric: tabular-nums; font-weight: 600; color: #FFE08A; letter-spacing: 0.08em; }
+    .promo-bar.promo-highlight { background: var(--ink); }
+    .promo-bar.promo-highlight .promo-bar-text { color: #FFE08A; }
+    @media (max-width: 560px) { .promo-bar-inner { font-size: 11px; gap: 8px; } }
+
+    /* ============================================================
        NAV - DARK CHROME
     ============================================================ */
-    .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 62px; background: var(--ink); border-bottom: 1px solid var(--hairline); }
+    .site-nav { position: fixed; top: 36px; left: 0; right: 0; z-index: 100; height: 62px; background: var(--ink); border-bottom: 1px solid var(--hairline); }
     .nav-inner { max-width: var(--container); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
     .nav-wordmark { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 0.20em; color: #FFFFFF; text-transform: uppercase; }
     .nav-wordmark-dot { color: var(--red); letter-spacing: 0; margin-left: -0.05em; }
@@ -106,13 +117,13 @@
     /* ============================================================
        HERO - DARK CHROME + PRODUCT PAGE LAYOUT
     ============================================================ */
-    .hero { background: var(--ink); padding-top: 62px; display: flex; flex-direction: column; }
+    .hero { background: var(--ink); padding-top: 98px; display: flex; flex-direction: column; }
     .hero-body {
       max-width: var(--container);
       margin: 0 auto;
       padding: 48px 48px 56px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.92fr 1.08fr;
       gap: 56px;
       align-items: start;
       width: 100%;
@@ -566,6 +577,16 @@
 <body>
 
 <!-- ================================================================
+     PROMO BAR - TOP ANNOUNCEMENT (mirrors sticky bar; driven by one PROMO config in JS)
+================================================================ -->
+<div class="promo-bar" id="promoBar" role="region" aria-label="Current promotion">
+  <div class="promo-bar-inner">
+    <span class="promo-bar-text" id="promoBarText"><strong>Buy 2 Get 1 Free</strong></span>
+    <span class="promo-bar-countdown" id="promoCountdown" aria-hidden="true"></span>
+  </div>
+</div>
+
+<!-- ================================================================
      NAV - DARK CHROME
 ================================================================ -->
 <nav class="site-nav" aria-label="Main navigation">
@@ -762,7 +783,7 @@
 
       <!-- Add to Cart -->
       <button class="buybox-cta" id="ctaBtn" aria-label="Add to cart">
-        <span>Add to Cart</span>
+        <span id="ctaLabel">Add to Cart · Black</span>
         <span class="buybox-cta-sep">|</span>
         <span class="buybox-cta-price" id="ctaPrice">$46</span>
       </button>
@@ -1332,8 +1353,8 @@
       <div>
         <p class="footer-col-head">Guides</p>
         <ul class="footer-links">
-          <li><a href="/hair-density-filler-for-men">Hair density filler for men</a></li>
-          <li><a href="/hairline-powder-for-men">Hairline powder for men</a></li>
+          <li><a href="/hair-density-filler-for-men">Hair density filler</a></li>
+          <li><a href="/hairline-powder-for-men">Hairline powder</a></li>
           <li><a href="/toppik-alternative">Toppik alternative</a></li>
           <li><a href="/meld-vs-hairo">MELD vs Hairo</a></li>
         </ul>
@@ -1349,13 +1370,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>
-        <p class="footer-imprint-code">// Imprint</p>
-        <p class="footer-imprint">
-          MELD HAIR LLC · Wyoming<br>
-          © 2026 MELD Hair LLC · All rights reserved
-        </p>
-      </div>
+      <p class="footer-private">© 2026 MELD. All rights reserved.</p>
     </div>
   </div>
 </footer>
@@ -1365,8 +1380,8 @@
 ================================================================ -->
 <div class="sticky-bar" id="stickyBar" aria-hidden="true">
   <div class="sticky-bar-inner">
-    <p class="sticky-copy"><strong>MELD Hair Density Filler</strong> · Buy 2 Get 1 Free · $46 for 3 jars</p>
-    <button class="sticky-cta" id="stickyCtaBtn">Order Now · $46</button>
+    <p class="sticky-copy"><strong id="stickyPromoText">Buy 2 Get 1 Free</strong> · Free US shipping · 60-day guarantee</p>
+    <button class="sticky-cta" id="stickyCtaBtn">Order Now</button>
   </div>
 </div>
 
@@ -1443,6 +1458,8 @@
       this.classList.add('active');
       this.setAttribute('aria-checked', 'true');
       if (colorNameEl) colorNameEl.textContent = this.dataset.name || '';
+      var _cl = document.getElementById('ctaLabel');
+      if (_cl) _cl.textContent = 'Add to Cart · ' + (this.dataset.name || '');
     });
   });
 
@@ -1523,6 +1540,35 @@
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   if (modal) modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
 
+  /* --- Promo bar: ONE source of truth for the top bar + the sticky bar promo,
+         plus a Hairo-style daily countdown. For a seasonal promo (Father's Day,
+         Veterans Day, etc.) set PROMO.text and PROMO.highlight = true. --- */
+  (function() {
+    var PROMO = { text: 'Buy 2 Get 1 Free', highlight: false };
+    var topText = document.getElementById('promoBarText');
+    var stickyText = document.getElementById('stickyPromoText');
+    if (topText) topText.innerHTML = '<strong>' + PROMO.text + '</strong>';
+    if (stickyText) stickyText.textContent = PROMO.text;
+    var bar = document.getElementById('promoBar');
+    if (bar && PROMO.highlight) bar.classList.add('promo-highlight');
+
+    var cd = document.getElementById('promoCountdown');
+    if (cd) {
+      function pad(n) { return (n < 10 ? '0' : '') + n; }
+      function tick() {
+        var now = new Date();
+        var end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+        var diff = Math.max(0, end - now);
+        var h = Math.floor(diff / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        cd.textContent = 'Ends in ' + pad(h) + ':' + pad(m) + ':' + pad(s);
+      }
+      tick();
+      setInterval(tick, 1000);
+    }
+  })();
+
   /* --- Sticky bar (IntersectionObserver on hero) --- */
   var heroEl   = document.getElementById('hero');
   var stickyBar = document.getElementById('stickyBar');
@@ -1589,7 +1635,7 @@
   if (ctaBtn) ctaBtn.addEventListener('click', function() { goToCheckout(); });
 
   var stickyCta = document.getElementById('stickyCtaBtn');
-  if (stickyCta) stickyCta.addEventListener('click', function() { goToCheckout('a'); });
+  if (stickyCta) stickyCta.addEventListener('click', function() { goToCheckout(); });
 
   var orderCta = document.getElementById('orderCtaBtn');
   if (orderCta) {
