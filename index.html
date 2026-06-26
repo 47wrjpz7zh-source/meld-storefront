@@ -28,6 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet"></noscript>
   <script src="/consent.js" defer></script>
+  <script src="/meta-pixel.js" defer></script>
   <style>
     /* ============================================================
        DESIGN TOKENS - v2.1 ARCHIVE (unchanged)
@@ -1629,7 +1630,7 @@
   }
   function goToCheckout(planOverride) {
     var url = buildCartUrl(planOverride);
-    if (url) window.location.href = url;
+    if (url) window.location.href = window.meldDecorateCheckout ? window.meldDecorateCheckout(url) : url;
   }
   var ctaBtn = document.getElementById('ctaBtn');
   if (ctaBtn) ctaBtn.addEventListener('click', function() { goToCheckout(); });
