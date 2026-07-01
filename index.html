@@ -165,6 +165,7 @@
 
     /* Title + badge */
     .buybox-title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .buybox-eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin: 0 0 2px; }
     .buybox-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 3vw, 34px); color: var(--paper); line-height: 1.05; }
     .spring-sale-badge { display: inline-flex; align-items: center; background: var(--red); color: #fff; font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 12px; flex-shrink: 0; }
 
@@ -672,6 +673,9 @@
         <span class="stars-label">Excellent</span>
       </div>
 
+      <!-- Ad scent-match eyebrow: echoes the clicked ad's hook (set from ?ad=), hidden for organic -->
+      <p class="buybox-eyebrow" id="buyboxEyebrow" hidden></p>
+
       <!-- Title -->
       <div class="buybox-title-row">
         <h1 class="buybox-title">Hair Density Filler for Men</h1>
@@ -729,13 +733,13 @@
             <span class="plan-popular-tag" aria-hidden="true">Most Popular</span>
             <span class="plan-name">Buy 2 Get 1 Free</span>
             <span class="plan-price-row">
-              <span class="plan-price">$23</span>
+              <span class="plan-price">$15</span>
               <span class="plan-per">/ per jar</span>
               <span class="plan-was">$39</span>
             </span>
             <span class="plan-supply">3 Month Supply</span>
             <span class="plan-feature">Free Shade Swap</span>
-            <span class="plan-save-tag">Save 41%</span>
+            <span class="plan-save-tag">Save 61%</span>
           </button>
 
           <!-- Plan B: 1 Jar -->
@@ -1658,6 +1662,22 @@
 
 <!-- Exit-intent email-capture popup (10% off). Gated: needs a real MELD10 Shopify discount + W5 activation to capture. -->
 <script src="/exit-intent-popup.js" defer></script>
+
+<!-- Ad scent-match: echo the clicked ad's hook in the buybox eyebrow (organic traffic unaffected) -->
+<script>
+(function () {
+  var MAP = {
+    hairline: "Your hairline's best-kept secret",
+    shade:    "Wrong shade? We'll swap it free.",
+    ugc:      "Fuller-looking hair in 60 seconds"
+  };
+  try {
+    var key = new URLSearchParams(location.search).get('ad');
+    var el = document.getElementById('buyboxEyebrow');
+    if (el && key && MAP[key]) { el.textContent = MAP[key]; el.hidden = false; }
+  } catch (e) {}
+})();
+</script>
 
 </body>
 </html>
