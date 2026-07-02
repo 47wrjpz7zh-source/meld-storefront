@@ -13,7 +13,7 @@
    Phase 1.5 (2026-06-20, T5): real selectors wired from the live
    index.html checkout layer. ViewContent on PDP load, InitiateCheckout on
    every buy CTA, and cross-domain attribution (fbclid/_fbc/_fbp) appended
-   to the Shopify cart URL so the purchase on qs3wnm-af.myshopify.com can be
+   to the Shopify cart URL so the purchase on shop.meldhair.com can be
    matched back. Purchase itself fires server-side via Shopify CAPI
    (Admin > Facebook & Instagram > Data Sharing = Maximum), not here.
    STAGED ONLY. Not pushed. One-line integration point flagged in the runbook.
@@ -22,7 +22,7 @@
   'use strict';
 
   var PIXEL_ID    = '1734219527777672'; // "Meld Hair's pixel" — set 2026-06-25
-  var SHOP_DOMAIN = 'qs3wnm-af.myshopify.com';
+  var SHOP_DOMAIN = 'shop.meldhair.com';
   var CURRENCY    = 'USD';
 
   // Buy CTAs that hand off to the Shopify cart (from index.html checkout wiring).
