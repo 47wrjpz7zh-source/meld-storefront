@@ -476,6 +476,43 @@
       .faq-q { font-size: 17px; }
       .compare-table thead th, .compare-table tbody td { padding: 10px 12px; font-size: 13px; }
     }
+
+    /* ============================================================
+       CRO v01.1-04 (2026-07-03): mobile benefit lede, quantified
+       rating at the CTA, plan total on the card, sticky price,
+       before/after load hardening
+    ============================================================ */
+    .hero-lede { display: none; }
+    .hero-lede-kicker { font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 9px; }
+    .hero-lede-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(29px, 8.2vw, 36px); line-height: 1.06; color: var(--paper); letter-spacing: -0.01em; }
+    .hero-lede-sub { font-family: var(--font-body); font-size: 15px; line-height: 1.5; color: var(--paper-dim); margin-top: 11px; }
+
+    /* Quantified rating in the top stars row */
+    .stars-score { font-family: var(--font-mono); font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--paper); }
+    .stars-count { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.06em; color: var(--paper-dim); transition: color var(--ease-quick); }
+    .stars-count:hover { color: var(--paper); text-decoration: underline; }
+
+    /* Rating strip sitting right above the primary CTA (proof at the decision point) */
+    .cta-rating { display: flex; align-items: center; justify-content: center; gap: 9px; }
+    .cta-rating .stars-row { display: flex; gap: 2px; }
+    .cta-rating .stars-row svg { width: 15px; height: 15px; fill: var(--brass); }
+    .cta-rating-text { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; color: var(--paper-dim); }
+    .cta-rating-text strong { color: var(--paper); font-weight: 600; }
+
+    /* Plan total on the plan card (the actual charge, not only per-jar) */
+    .plan-total { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; color: var(--paper); margin-top: 1px; }
+    .plan-total strong { font-weight: 600; }
+
+    /* Sticky CTA price */
+    .sticky-cta-price { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin-left: 9px; line-height: 1; }
+
+    /* Before/after: softer slot tone + fade image in so a slow lazy image never hard-cuts from a bright-gray slot */
+    .ba-slot.before-slot { background: #C9C3BA; }
+    .ba-slot.after-slot  { background: #D3CEC6; }
+
+    @media (max-width: 960px) {
+      .hero-lede { display: block; margin-bottom: 2px; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -610,6 +647,13 @@
 <section class="hero" id="hero" aria-label="Product">
   <div class="hero-body">
 
+    <!-- MOBILE BENEFIT LEDE: what MELD is + the core benefit, above the fold on mobile (hidden on desktop, where the buy box already sits top-right) -->
+    <div class="hero-lede" aria-hidden="true">
+      <p class="hero-lede-kicker">Hair Density Filler</p>
+      <p class="hero-lede-title">Thicker-looking hair in seconds.</p>
+      <p class="hero-lede-sub">Cover thinning spots and a patchy hairline instantly. Undetectable, sweat-resistant, and washes out with any shampoo.</p>
+    </div>
+
     <!-- LEFT: Image Gallery -->
     <div class="hero-gallery">
       <!-- Main image -->
@@ -670,7 +714,8 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <span class="stars-label">Excellent</span>
+        <span class="stars-score">5.0</span>
+        <a href="#reviews" class="stars-count">4 reviews</a>
       </div>
 
       <!-- Ad scent-match eyebrow: echoes the clicked ad's hook (set from ?ad=), hidden for organic -->
@@ -738,6 +783,7 @@
               <span class="plan-was">$39</span>
             </span>
             <span class="plan-supply">3 Month Supply</span>
+            <span class="plan-total"><strong>$46</strong> total</span>
             <span class="plan-feature">Free Shade Swap</span>
             <span class="plan-save-tag">Save 61%</span>
           </button>
@@ -751,6 +797,7 @@
               <span class="plan-was">$39</span>
             </span>
             <span class="plan-supply">1 Month Supply</span>
+            <span class="plan-total"><strong>$35</strong> total</span>
             <span class="plan-feature">Free Shade Swap</span>
             <span class="plan-save-tag">Save 10%</span>
           </button>
@@ -784,6 +831,18 @@
             <span class="free-gift-free">FREE</span>
           </div>
         </div>
+      </div>
+
+      <!-- Rating at the decision point -->
+      <div class="cta-rating" aria-label="Customer rating">
+        <span class="stars-row" role="img" aria-label="Rated 5 out of 5">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        <span class="cta-rating-text"><strong>5.0</strong> from 4 customer reviews</span>
       </div>
 
       <!-- Add to Cart -->
@@ -1386,7 +1445,7 @@
 <div class="sticky-bar" id="stickyBar" aria-hidden="true">
   <div class="sticky-bar-inner">
     <p class="sticky-copy"><strong id="stickyPromoText">Buy 2 Get 1 Free</strong> · Free US shipping · 60-day guarantee</p>
-    <button class="sticky-cta" id="stickyCtaBtn">Order Now</button>
+    <button class="sticky-cta" id="stickyCtaBtn">Add to Cart<span class="sticky-cta-price" id="stickyCtaPrice">$46</span></button>
   </div>
 </div>
 
@@ -1484,6 +1543,8 @@
       var plan = this.dataset.plan;
       if (ctaPrice) ctaPrice.textContent = planData[plan].price;
       if (ctaWas)   ctaWas.textContent   = planData[plan].was;
+      var _sp = document.getElementById('stickyCtaPrice');
+      if (_sp) _sp.textContent = planData[plan].price;
 
       /* Reorder gallery thumbs by plan:
          3-Jar (a) -> slot 1 = multi-pack, slot 2 = video-thumb (with play badge)
@@ -1591,6 +1652,29 @@
     }, { threshold: 0.08 });
     io.observe(heroEl);
   }
+
+  /* --- Before/after: force each image to load ~700px before it scrolls into view,
+         so a fast scroll can't outrun the lazy loader and flash the gray slot.
+         Degrades safely: if JS/IO is unavailable the images stay natively lazy. --- */
+  (function() {
+    var baImgs = document.querySelectorAll('.ba-slot img');
+    if (!baImgs.length) return;
+    if (!('IntersectionObserver' in window)) {
+      baImgs.forEach(function(im) { im.loading = 'eager'; });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries, obs) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var im = entry.target;
+          im.loading = 'eager';
+          if (im.decode) { im.decode().catch(function() {}); }
+          obs.unobserve(im);
+        }
+      });
+    }, { rootMargin: '700px 0px' });
+    baImgs.forEach(function(im) { io.observe(im); });
+  })();
 
   /* --- Smooth scroll for all anchor links --- */
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
