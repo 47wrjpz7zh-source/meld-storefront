@@ -1635,22 +1635,40 @@
     }
   })();
 
-  /* --- Sticky bar (IntersectionObserver on hero) --- */
-  var heroEl   = document.getElementById('hero');
+  /* --- Sticky bar ---
+     Desktop: reveal once the hero (with its top-right buy box) scrolls out of view.
+     Mobile: price + Add to Cart must be reachable from the first paint (the in-page
+     buy box sits ~2 screens down under the gallery), so the bar shows on load and
+     hides only while the in-page CTA is actually on screen (no stacked double CTA). */
+  var heroEl    = document.getElementById('hero');
   var stickyBar = document.getElementById('stickyBar');
-  if (heroEl && stickyBar && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (!entry.isIntersecting) {
-          stickyBar.classList.add('show');
-          stickyBar.removeAttribute('aria-hidden');
-        } else {
-          stickyBar.classList.remove('show');
-          stickyBar.setAttribute('aria-hidden', 'true');
-        }
-      });
-    }, { threshold: 0.08 });
-    io.observe(heroEl);
+  var inlineCta = document.getElementById('ctaBtn');
+  var mqMobile  = window.matchMedia('(max-width: 768px)');
+  function showSticky() { stickyBar.classList.add('show'); stickyBar.removeAttribute('aria-hidden'); }
+  function hideSticky() { stickyBar.classList.remove('show'); stickyBar.setAttribute('aria-hidden', 'true'); }
+  if (stickyBar && 'IntersectionObserver' in window) {
+    if (heroEl) {
+      var ioHero = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (mqMobile.matches) return;            // mobile handled by the CTA observer below
+          if (!entry.isIntersecting) showSticky(); else hideSticky();
+        });
+      }, { threshold: 0.08 });
+      ioHero.observe(heroEl);
+    }
+    if (inlineCta) {
+      var ioCta = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!mqMobile.matches) return;           // desktop handled by the hero observer above
+          if (entry.isIntersecting) hideSticky(); else showSticky();
+        });
+      }, { threshold: 0.5 });
+      ioCta.observe(inlineCta);
+    }
+    if (mqMobile.matches) showSticky();            // first paint on mobile, before any scroll
+    mqMobile.addEventListener('change', function() { // re-sync when crossing the breakpoint
+      if (mqMobile.matches) showSticky(); else hideSticky();
+    });
   }
 
   /* --- Before/after: force each image to load ~700px before it scrolls into view,
