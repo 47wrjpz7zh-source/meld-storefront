@@ -775,9 +775,10 @@
         <p class="plan-selector-label">Choose your plan:</p>
         <div class="plan-options" role="radiogroup" aria-label="Choose a plan">
 
-          <!-- Plan A: B2G1 Most Popular -->
-          <button class="plan-btn selected" id="planA" data-plan="a" aria-pressed="true" aria-label="Buy 2 Get 1 Free, most popular">
-            <span class="plan-popular-tag" aria-hidden="true">Most Popular</span>
+          <!-- Plan A: B2G1. NOT the default (Daniel 2026-07-14): defaulting cold traffic into the
+               3-jar bundle burns all 500 jars for $4,195 of contribution vs $10,750+ as singles.
+               The bundle only ever made sense as a subscription, and that was never built. -->
+          <button class="plan-btn" id="planA" data-plan="a" aria-pressed="false" aria-label="Buy 2 Get 1 Free">
             <span class="plan-name">Buy 2 Get 1 Free</span>
             <span class="plan-price-row">
               <span class="plan-price">$15</span>
@@ -790,8 +791,10 @@
             <span class="plan-save-tag">Save 61%</span>
           </button>
 
-          <!-- Plan B: 1 Jar -->
-          <button class="plan-btn" id="planB" data-plan="b" aria-pressed="false" aria-label="1 Jar">
+          <!-- Plan B: 1 Jar. THE DEFAULT (Daniel 2026-07-14). Lowest-risk entry for a first-time
+               buyer of an unknown brand, and the best use of a 500-jar test batch: $21.60
+               contribution per jar vs $8.44 in the bundle. -->
+          <button class="plan-btn selected" id="planB" data-plan="b" aria-pressed="true" aria-label="1 Jar">
             <span class="plan-name">1 Jar</span>
             <span class="plan-price-row">
               <span class="plan-price">$35</span>
