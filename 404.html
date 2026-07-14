@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | MELD</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0C0C0C; --paper:#EFE9DB; --paper-dim:rgba(239,233,219,.62);
+    --red:#B2321E; --hairline:rgba(239,233,219,.16);
+    --font-display:'Cormorant Garamond',Georgia,serif;
+    --font-mono:'IBM Plex Mono','Courier New',monospace;
+    --font-body:'DM Sans',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--ink);color:var(--paper);font-family:var(--font-body);
+    min-height:100vh;display:flex;flex-direction:column;
+    -webkit-font-smoothing:antialiased;
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 28px;border-bottom:1px solid var(--hairline);
+  }
+  .wordmark{
+    font-family:var(--font-body);font-weight:500;font-size:19px;
+    letter-spacing:.22em;color:var(--paper);text-decoration:none;
+  }
+  .wordmark span{color:var(--red)}
+  .nav-link{
+    font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;
+    color:var(--paper-dim);text-decoration:none;transition:color .2s;
+  }
+  .nav-link:hover{color:var(--paper)}
+  main{
+    flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:48px 24px;
+  }
+  .code{
+    font-family:var(--font-mono);font-size:12px;letter-spacing:.2em;
+    color:var(--red);text-transform:uppercase;margin-bottom:20px;
+  }
+  h1{
+    font-family:var(--font-display);font-weight:300;
+    font-size:clamp(34px,7vw,56px);line-height:1.1;margin-bottom:16px;
+  }
+  p{color:var(--paper-dim);font-size:15px;line-height:1.6;max-width:34ch;margin-bottom:32px}
+  .cta{
+    display:inline-block;background:var(--paper);color:var(--ink);
+    padding:15px 34px;border-radius:4px;text-decoration:none;
+    font-family:var(--font-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(239,233,219,.18)}
+  footer{
+    padding:22px 28px;border-top:1px solid var(--hairline);
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--paper-dim);
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="wordmark">MELD<span>.</span></a>
+    <a href="/" class="nav-link">Shop</a>
+  </nav>
+  <main>
+    <p class="code">Error 404</p>
+    <h1>This page went missing.</h1>
+    <p>The link is broken or the page has moved. Your hairline, however, is exactly where you left it.</p>
+    <a href="/" class="cta">Back to MELD</a>
+  </main>
+  <footer>MELD &middot; 60-day money-back guarantee</footer>
+</body>
+</html>

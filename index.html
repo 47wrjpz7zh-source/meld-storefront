@@ -189,6 +189,8 @@
     .color-guide-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; flex-shrink: 0; }
 
     /* Color selector */
+    .plan-spec { font-family: var(--font-body); font-size: 12px; color: var(--paper-dim); margin: 12px 0 0; line-height: 1.5; }
+    .plan-spec strong { color: var(--paper); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; }
     .buybox-color-label { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.08em; color: var(--paper-dim); margin-bottom: 10px; }
     .buybox-color-label span { color: var(--paper); }
     .color-swatches { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -635,7 +637,7 @@
       <a href="#how-it-works" class="nav-link">How it works</a>
       <a href="#hero" class="nav-cart" aria-label="Cart">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-        Cart (0)
+        <span data-cart-count>Cart (0)</span>
       </a>
     </div>
   </div>
@@ -803,6 +805,7 @@
           </button>
 
         </div>
+        <p class="plan-spec">Net weight: <strong>4g / 0.14oz</strong> per jar. One jar lasts most people 1 to 2 months.</p>
       </div>
 
       <!-- Free gifts -->
@@ -1727,29 +1730,37 @@
     var pb = document.querySelector('.plan-btn.selected');
     return (pb && pb.dataset.plan) ? pb.dataset.plan : 'a';
   }
-  function buildCartUrl(planKey, shade) {
-    var p = planKey || currentPlan();
-    var s = shade || currentShade();
-    var vid = VARIANT_MAP[p] && VARIANT_MAP[p][s];
-    if (!vid) return null;
-    return 'https://' + SHOP_DOMAIN + '/cart/' + vid + ':1';
+  /* Config for cart-drawer.js. The drawer keeps cart state in localStorage (Shopify's
+     Ajax Cart API sends no CORS headers, so a cross-origin drawer cannot use it) and
+     only hands off to Shopify when the buyer explicitly clicks Checkout. */
+  window.MELD_SHOP = {
+    domain: SHOP_DOMAIN,
+    variantMap: VARIANT_MAP,
+    currentPlan: currentPlan,
+    currentShade: currentShade,
+    image: '/images/pack-2-angle.webp',
+    plans: {
+      a: { label: 'Buy 2, Get 1 Free — 3 jars', price: 46, jars: 3 },
+      b: { label: '1 Jar', price: 35, jars: 1 }
+    }
+  };
+
+  function addToCart(planOverride) {
+    if (window.MELDCart) window.MELDCart.add(planOverride);
   }
-  function goToCheckout(planOverride) {
-    var url = buildCartUrl(planOverride);
-    if (url) window.location.href = window.meldDecorateCheckout ? window.meldDecorateCheckout(url) : url;
-  }
+
   var ctaBtn = document.getElementById('ctaBtn');
-  if (ctaBtn) ctaBtn.addEventListener('click', function() { goToCheckout(); });
+  if (ctaBtn) ctaBtn.addEventListener('click', function() { addToCart(); });
 
   var stickyCta = document.getElementById('stickyCtaBtn');
-  if (stickyCta) stickyCta.addEventListener('click', function() { goToCheckout(); });
+  if (stickyCta) stickyCta.addEventListener('click', function() { addToCart(); });
 
   var orderCta = document.getElementById('orderCtaBtn');
   if (orderCta) {
     orderCta.style.cursor = 'pointer';
-    orderCta.addEventListener('click', function() { goToCheckout('a'); });
+    orderCta.addEventListener('click', function() { addToCart('a'); });
     orderCta.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goToCheckout('a'); }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); addToCart('a'); }
     });
   }
 
@@ -1757,10 +1768,12 @@
   if (navCart) {
     navCart.addEventListener('click', function(e) {
       e.preventDefault();
-      window.location.href = 'https://' + SHOP_DOMAIN + '/cart';
+      if (window.MELDCart) window.MELDCart.open();
     });
   }
 </script>
+<link rel="stylesheet" href="/cart-drawer.css">
+<script src="/cart-drawer.js" defer></script>
 
 <!-- Exit-intent email-capture popup (10% off). Gated: needs a real MELD10 Shopify discount + W5 activation to capture. -->
 <script src="/exit-intent-popup.js" defer></script>

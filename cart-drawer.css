@@ -1,0 +1,111 @@
+/* MELD cart drawer. Brand tokens match index.html:
+   display Cormorant Garamond, mono IBM Plex Mono, body DM Sans, MELD red #B2321E. */
+
+.meld-cart { position: fixed; inset: 0; z-index: 9999; pointer-events: none; }
+.meld-cart.open { pointer-events: auto; }
+
+.meld-cart-scrim {
+  position: absolute; inset: 0; background: rgba(12, 12, 12, 0.55);
+  opacity: 0; transition: opacity .28s ease; backdrop-filter: blur(2px);
+}
+.meld-cart.open .meld-cart-scrim { opacity: 1; }
+
+.meld-cart-panel {
+  position: absolute; top: 0; right: 0; height: 100%;
+  width: min(400px, 100vw);
+  background: #0C0C0C; color: #EFE9DB;
+  border-left: 1px solid rgba(239, 233, 219, 0.14);
+  display: flex; flex-direction: column;
+  transform: translateX(100%); transition: transform .32s cubic-bezier(.22,.61,.36,1);
+  box-shadow: -18px 0 48px rgba(0,0,0,.45);
+}
+.meld-cart.open .meld-cart-panel { transform: translateX(0); }
+
+.meld-cart-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 22px 16px; border-bottom: 1px solid rgba(239,233,219,0.12);
+}
+.meld-cart-title {
+  font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+  letter-spacing: .16em; text-transform: uppercase; color: #EFE9DB;
+}
+.meld-cart-x {
+  background: none; border: 0; color: #EFE9DB; font-size: 26px; line-height: 1;
+  cursor: pointer; padding: 0 4px; opacity: .65; transition: opacity .2s;
+}
+.meld-cart-x:hover { opacity: 1; }
+
+.meld-cart-body { flex: 1; overflow-y: auto; padding: 22px; }
+.meld-cart-empty { font-family: 'DM Sans', system-ui, sans-serif; opacity: .6; font-size: 15px; }
+
+.meld-cart-item { display: flex; gap: 14px; align-items: flex-start; }
+.meld-cart-img {
+  width: 72px; height: 72px; object-fit: cover; border-radius: 6px;
+  background: #151515; border: 1px solid rgba(239,233,219,0.10); flex: 0 0 auto;
+}
+.meld-cart-info { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 0; }
+.meld-cart-name {
+  font-family: 'Cormorant Garamond', Georgia, serif; font-size: 19px; line-height: 1.2;
+}
+.meld-cart-meta {
+  font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; opacity: .68;
+}
+.meld-cart-weight { font-family: 'IBM Plex Mono', monospace; font-size: 11px; opacity: .5; letter-spacing: .04em; }
+
+.meld-cart-qty {
+  display: flex; align-items: center; gap: 2px; flex: 0 0 auto;
+  border: 1px solid rgba(239,233,219,0.18); border-radius: 4px; overflow: hidden;
+}
+.meld-cart-qty button {
+  background: none; border: 0; color: #EFE9DB; width: 28px; height: 28px;
+  cursor: pointer; font-size: 15px; line-height: 1; transition: background .18s;
+}
+.meld-cart-qty button:hover { background: rgba(239,233,219,0.08); }
+.meld-cart-qty span {
+  font-family: 'IBM Plex Mono', monospace; font-size: 13px; min-width: 22px; text-align: center;
+}
+
+.meld-cart-sum {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(239,233,219,0.12);
+  font-family: 'DM Sans', system-ui, sans-serif; font-size: 14px;
+}
+.meld-cart-total { font-family: 'IBM Plex Mono', monospace; font-size: 20px; }
+.meld-cart-ship {
+  margin: 8px 0 0; font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; opacity: .7;
+}
+.meld-cart-ship strong { color: #EFE9DB; opacity: 1; }
+
+.meld-cart-foot { padding: 18px 22px 22px; border-top: 1px solid rgba(239,233,219,0.12); }
+.meld-cart-trust {
+  list-style: none; margin: 0 0 16px; padding: 0;
+  display: flex; flex-direction: column; gap: 7px;
+}
+.meld-cart-trust li {
+  font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; opacity: .78;
+  padding-left: 18px; position: relative;
+}
+.meld-cart-trust li::before {
+  content: ''; position: absolute; left: 0; top: 7px;
+  width: 6px; height: 6px; border-radius: 50%; background: #B2321E;
+}
+
+.meld-cart-go {
+  width: 100%; padding: 15px; border: 0; border-radius: 4px; cursor: pointer;
+  background: #EFE9DB; color: #0C0C0C;
+  font-family: 'IBM Plex Mono', monospace; font-size: 13px;
+  letter-spacing: .12em; text-transform: uppercase;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.meld-cart-go:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(239,233,219,0.18); }
+
+.meld-cart-keep {
+  width: 100%; margin-top: 10px; padding: 10px; background: none; border: 0; cursor: pointer;
+  color: #EFE9DB; opacity: .55; font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px;
+  transition: opacity .2s;
+}
+.meld-cart-keep:hover { opacity: .85; }
+
+@media (prefers-reduced-motion: reduce) {
+  .meld-cart-scrim, .meld-cart-panel { transition: none; }
+}
