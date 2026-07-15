@@ -101,6 +101,7 @@
     .promo-bar.promo-highlight { background: var(--ink); }
     .promo-bar.promo-highlight .promo-bar-text { color: #FFE08A; }
     @media (max-width: 560px) { .promo-bar-inner { font-size: 11px; gap: 8px; } }
+    @media (max-width: 480px) { .promo-bar .promo-offer { display: none; } }
 
     /* ============================================================
        NAV - DARK CHROME
@@ -1492,34 +1493,9 @@
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
   if (modal) modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
 
-  /* --- Promo bar: ONE source of truth for the top bar + the sticky bar promo,
-         plus a Hairo-style daily countdown. For a seasonal promo (Father's Day,
-         Veterans Day, etc.) set PROMO.text and PROMO.highlight = true. --- */
-  (function() {
-    var PROMO = { text: 'Buy 2 Get 1 Free', highlight: false };
-    var topText = document.getElementById('promoBarText');
-    var stickyText = document.getElementById('stickyPromoText');
-    if (topText) topText.innerHTML = '<strong>' + PROMO.text + '</strong>';
-    if (stickyText) stickyText.textContent = PROMO.text;
-    var bar = document.getElementById('promoBar');
-    if (bar && PROMO.highlight) bar.classList.add('promo-highlight');
-
-    var cd = document.getElementById('promoCountdown');
-    if (cd) {
-      function pad(n) { return (n < 10 ? '0' : '') + n; }
-      function tick() {
-        var now = new Date();
-        var end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
-        var diff = Math.max(0, end - now);
-        var h = Math.floor(diff / 3600000);
-        var m = Math.floor((diff % 3600000) / 60000);
-        var s = Math.floor((diff % 60000) / 1000);
-        cd.textContent = 'Ends in ' + pad(h) + ':' + pad(m) + ':' + pad(s);
-      }
-      tick();
-      setInterval(tick, 1000);
-    }
-  })();
+  /* --- Promo bar + sticky promo text + countdown now live in /holiday-timer.js
+         (a real holiday-aware countdown that rolls to the next US holiday;
+         replaces the old fake daily-reset). --- */
 
   /* --- Sticky bar ---
      Desktop: reveal once the hero (with its top-right buy box) scrolls out of view.
@@ -1657,6 +1633,8 @@
 </script>
 <link href="/cart-drawer.css" rel="stylesheet"/>
 <script defer="" src="/cart-drawer.js"></script>
+<!-- Promo bar: real holiday-aware countdown (rolls to the next US holiday) -->
+<script defer="" src="/holiday-timer.js"></script>
 <!-- Exit-intent email-capture popup (10% off). Gated: needs a real MELD10 Shopify discount + W5 activation to capture. -->
 <script defer="" src="/exit-intent-popup.js"></script>
 <!-- Ad scent-match: echo the clicked ad's hook in the buybox eyebrow (organic traffic unaffected) -->
