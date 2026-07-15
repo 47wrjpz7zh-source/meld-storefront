@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="/favicon.ico" rel="icon" sizes="any"/>
-<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="/site.webmanifest" rel="manifest"/>
-<meta content="#1A1A1A" name="theme-color"/>
-<link as="image" fetchpriority="high" href="/images/pack-2-angle.webp" rel="preload" type="image/webp"/>
-<meta content="index, follow" name="robots"/>
-<title>MELD | Hair Powder That Covers Thinning Hair in Seconds</title>
-<meta content="MELD is a hair density filler and hairline powder for men. Cover thinning and bald spots in seconds for thicker-looking hair. Sweat-resistant, long-lasting." name="description"/>
-<meta content="MELD | Hair Powder That Covers Thinning Hair in Seconds" property="og:title"/>
-<meta content="A hair density filler and hairline powder for men. Cover thinning areas in seconds for thicker-looking, fuller-looking hair. Sweat-resistant and long-lasting." property="og:description"/>
-<meta content="https://meldhair.com/images/og-image.webp" property="og:image"/>
-<meta content="product" property="og:type"/>
-<meta content="https://meldhair.com/" property="og:url"/>
-<link href="https://meldhair.com/" rel="canonical"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="https://meldhair.com/images/og-image.webp" name="twitter:image"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=IBM+Plex+Mono:wght@300;400;500;600&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&amp;display=swap" rel="preload"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=IBM+Plex+Mono:wght@300;400;500;600&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
-<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=IBM+Plex+Mono:wght@300;400;500;600&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&amp;display=swap" rel="stylesheet"/></noscript>
-<script defer="" src="/consent.js"></script>
-<script defer="" src="/meta-pixel.js"></script>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1A1A1A">
+  <link rel="preload" as="image" href="/images/pack-2-angle.webp" type="image/webp" fetchpriority="high">
+  <meta name="robots" content="index, follow">
+  <title>MELD | Hair Powder That Covers Thinning Hair in Seconds</title>
+  <meta name="description" content="MELD is a hair density filler and hairline powder for men. Cover thinning and bald spots in seconds for thicker-looking hair. Sweat-resistant, long-lasting.">
+  <meta property="og:title" content="MELD | Hair Powder That Covers Thinning Hair in Seconds">
+  <meta property="og:description" content="A hair density filler and hairline powder for men. Cover thinning areas in seconds for thicker-looking, fuller-looking hair. Sweat-resistant and long-lasting.">
+  <meta property="og:image" content="https://meldhair.com/images/og-image.webp">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://meldhair.com/">
+  <link rel="canonical" href="https://meldhair.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://meldhair.com/images/og-image.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet"></noscript>
+  <script src="/consent.js" defer></script>
+  <style>
     /* ============================================================
        DESIGN TOKENS - v2.1 ARCHIVE (unchanged)
     ============================================================ */
@@ -159,14 +157,13 @@
     .hero-buybox { display: flex; flex-direction: column; gap: 20px; }
 
     /* Stars */
-    
+    .buybox-stars { display: flex; align-items: center; gap: 10px; }
     .stars-row { display: flex; gap: 3px; }
     .stars-row svg { width: 16px; height: 16px; fill: var(--brass); }
     .stars-label { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.10em; color: var(--paper-dim); }
 
     /* Title + badge */
     .buybox-title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
-    .buybox-eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin: 0 0 2px; }
     .buybox-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 3vw, 34px); color: var(--paper); line-height: 1.05; }
     .spring-sale-badge { display: inline-flex; align-items: center; background: var(--red); color: #fff; font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; padding: 5px 12px; flex-shrink: 0; }
 
@@ -190,8 +187,6 @@
     .color-guide-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; flex-shrink: 0; }
 
     /* Color selector */
-    .plan-spec { font-family: var(--font-body); font-size: 12px; color: var(--paper-dim); margin: 12px 0 0; line-height: 1.5; }
-    .plan-spec strong { color: var(--paper); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; }
     .buybox-color-label { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.08em; color: var(--paper-dim); margin-bottom: 10px; }
     .buybox-color-label span { color: var(--paper); }
     .color-swatches { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -333,11 +328,6 @@
     ============================================================ */
     .ugc-reviews { background: var(--body-bg); }
     .ugc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-
-    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-    .why-card { background: var(--body-bg-alt); border: 1px solid var(--body-border); border-radius: var(--radius-xl); padding: 24px 26px; }
-    .why-title { font-family: var(--font-display); font-size: 21px; margin: 0 0 8px; color: var(--body-fg); }
-    .why-body { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--body-fg-2); margin: 0; }
     .ugc-card { background: var(--body-bg-alt); border: 1px solid var(--body-border); overflow: hidden; border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); transition: box-shadow var(--ease-soft), transform var(--ease-soft); }
     .ugc-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
     .ugc-img-box { width: 100%; aspect-ratio: 1 / 1; background: #DEDAD3; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
@@ -484,45 +474,8 @@
       .faq-q { font-size: 17px; }
       .compare-table thead th, .compare-table tbody td { padding: 10px 12px; font-size: 13px; }
     }
-
-    /* ============================================================
-       CRO v01.1-04 (2026-07-03): mobile benefit lede, quantified
-       rating at the CTA, plan total on the card, sticky price,
-       before/after load hardening
-    ============================================================ */
-    .hero-lede { display: none; }
-    .hero-lede-kicker { font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 9px; }
-    .hero-lede-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(29px, 8.2vw, 36px); line-height: 1.06; color: var(--paper); letter-spacing: -0.01em; }
-    .hero-lede-sub { font-family: var(--font-body); font-size: 15px; line-height: 1.5; color: var(--paper-dim); margin-top: 11px; }
-
-    /* Quantified rating in the top stars row */
-    
-    
-    
-
-    /* Rating strip sitting right above the primary CTA (proof at the decision point) */
-    
-    
-    
-    
-    
-
-    /* Plan total on the plan card (the actual charge, not only per-jar) */
-    .plan-total { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; color: var(--paper); margin-top: 1px; }
-    .plan-total strong { font-weight: 600; }
-
-    /* Sticky CTA price */
-    .sticky-cta-price { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin-left: 9px; line-height: 1; }
-
-    /* Before/after: softer slot tone + fade image in so a slow lazy image never hard-cuts from a bright-gray slot */
-    .ba-slot.before-slot { background: #C9C3BA; }
-    .ba-slot.after-slot  { background: #D3CEC6; }
-
-    @media (max-width: 960px) {
-      .hero-lede { display: block; margin-bottom: 2px; }
-    }
   </style>
-<script type="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
     "@type": "Product",
@@ -599,7 +552,7 @@
     ]
   }
   </script>
-<script type="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -622,719 +575,816 @@
   </script>
 </head>
 <body>
+
 <!-- ================================================================
      PROMO BAR - TOP ANNOUNCEMENT (mirrors sticky bar; driven by one PROMO config in JS)
 ================================================================ -->
-<div aria-label="Current promotion" class="promo-bar" id="promoBar" role="region">
-<div class="promo-bar-inner">
-<span class="promo-bar-text" id="promoBarText"><strong>Buy 2 Get 1 Free</strong></span>
-<span aria-hidden="true" class="promo-bar-countdown" id="promoCountdown"></span>
+<div class="promo-bar" id="promoBar" role="region" aria-label="Current promotion">
+  <div class="promo-bar-inner">
+    <span class="promo-bar-text" id="promoBarText"><strong>Buy 2 Get 1 Free</strong></span>
+    <span class="promo-bar-countdown" id="promoCountdown" aria-hidden="true"></span>
+  </div>
 </div>
-</div>
+
 <!-- ================================================================
      NAV - DARK CHROME
 ================================================================ -->
-<nav aria-label="Main navigation" class="site-nav">
-<div class="nav-inner">
-<a aria-label="MELD home" class="nav-wordmark" href="/">MELD<span class="nav-wordmark-dot">.</span></a>
-<div class="nav-right">
-<a class="nav-link" href="#how-it-works">How it works</a>
-<a aria-label="Cart" class="nav-cart" href="#hero">
-<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" x2="21" y1="6" y2="6"></line><path d="M16 10a4 4 0 01-8 0"></path></svg>
-<span data-cart-count="">Cart (0)</span>
-</a>
-</div>
-</div>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-wordmark" aria-label="MELD home">MELD<span class="nav-wordmark-dot">.</span></a>
+    <div class="nav-right">
+      <a href="#how-it-works" class="nav-link">How it works</a>
+      <a href="#hero" class="nav-cart" aria-label="Cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Cart (0)
+      </a>
+    </div>
+  </div>
 </nav>
+
 <!-- ================================================================
      HERO - PRODUCT PAGE LAYOUT
 ================================================================ -->
-<section aria-label="Product" class="hero" id="hero">
-<div class="hero-body">
-<!-- MOBILE BENEFIT LEDE: what MELD is + the core benefit, above the fold on mobile (hidden on desktop, where the buy box already sits top-right) -->
-<div aria-hidden="true" class="hero-lede">
-<p class="hero-lede-kicker">Hair Density Filler</p>
-<p class="hero-lede-title">Thicker-looking hair in seconds.</p>
-<p class="hero-lede-sub">Cover thinning spots and a patchy hairline instantly. Undetectable, sweat-resistant, and washes out with any shampoo.</p>
-</div>
-<!-- LEFT: Image Gallery -->
-<div class="hero-gallery">
-<!-- Main image -->
-<div aria-label="Product image" class="gallery-main" id="galleryMain" role="img">
-<img alt="MELD multi-pack at two angles" class="active" data-thumb="0" fetchpriority="high" height="1800" id="galleryMainImg" loading="eager" src="images/pack-2-angle.webp" width="1800"/>
-<button aria-label="Previous image" class="gallery-nav gallery-nav-prev" id="galleryPrev" type="button">
-<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>
-</button>
-<button aria-label="Next image" class="gallery-nav gallery-nav-next" id="galleryNext" type="button">
-<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"></path></svg>
-</button>
-</div>
-<!-- Thumbnails -->
-<div aria-label="Product images" class="gallery-thumbs" role="list">
-<!-- Thumb 1: multi-pack 2-angle (active default) -->
-<div aria-label="Multi-pack, two angles" class="gallery-thumb active" data-index="0" role="listitem" tabindex="0">
-<img alt="MELD multi-pack at two angles" class="active" decoding="async" height="1800" loading="lazy" src="images/pack-2-angle.webp" width="1800"/>
-</div>
-<!-- Thumb 2: video -->
-<div aria-label="Application video" class="gallery-thumb" data-index="1" role="listitem" tabindex="0">
-<img alt="Application video" class="active" decoding="async" height="1800" loading="lazy" src="images/video-thumb.webp" width="1800"/>
-<div aria-hidden="true" class="thumb-play-badge">
-<svg viewbox="0 0 36 36"><circle cx="18" cy="18" fill="rgba(26,26,26,0.55)" r="17"></circle><polygon fill="rgba(239,233,219,0.7)" points="14,11 28,18 14,25"></polygon></svg>
-</div>
-</div>
-<!-- Thumb 3: application close-up -->
-<div aria-label="Application demo" class="gallery-thumb" data-index="2" role="listitem" tabindex="0">
-<img alt="Application demo" class="active" decoding="async" height="1800" loading="lazy" src="images/apply-demo.webp" width="1800"/>
-</div>
-<!-- Thumb 4: lifestyle marble -->
-<div aria-label="Lifestyle on marble surface" class="gallery-thumb" data-index="3" role="listitem" tabindex="0">
-<img alt="MELD compact on marble surface" class="active" decoding="async" height="1792" loading="lazy" src="images/lifestyle-marble.webp" width="2400"/>
-</div>
-<!-- Thumb 5: lifestyle wood -->
-<div aria-label="Lifestyle on wood surface" class="gallery-thumb" data-index="4" role="listitem" tabindex="0">
-<img alt="MELD compact on wood surface" class="active" decoding="async" height="1344" loading="lazy" src="images/lifestyle-wood.webp" width="1800"/>
-</div>
-<!-- Thumb 6: macro label detail -->
-<div aria-label="Macro label detail" class="gallery-thumb" data-index="5" role="listitem" tabindex="0">
-<img alt="MELD compact macro label detail" class="active" decoding="async" height="1800" loading="lazy" src="images/jar-5-macro.webp" width="1800"/>
-</div>
-<!-- Thumb 7: lifestyle nightstand scene -->
-<div aria-label="Lifestyle on wooden nightstand" class="gallery-thumb" data-index="6" role="listitem" tabindex="0">
-<img alt="MELD compact on wooden nightstand with towel and plant" class="active" decoding="async" height="1536" loading="lazy" src="images/lifestyle-nightstand.webp" width="2752"/>
-</div>
-</div>
-</div>
-<!-- RIGHT: Buy Box -->
-<div aria-label="Purchase options" class="hero-buybox">
-<!-- Stars -->
+<section class="hero" id="hero" aria-label="Product">
+  <div class="hero-body">
 
-<!-- Ad scent-match eyebrow: echoes the clicked ad's hook (set from ?ad=), hidden for organic -->
-<p class="buybox-eyebrow" hidden="" id="buyboxEyebrow"></p>
-<!-- Title -->
-<div class="buybox-title-row">
-<h1 class="buybox-title">Hair Density Filler for Men</h1>
-</div>
-<!-- Feature badges -->
-<div aria-label="Product features" class="buybox-feature-badges" role="list">
-<span class="buybox-badge" role="listitem">Long-lasting</span>
-<span class="buybox-badge" role="listitem">No Mess</span>
-<span class="buybox-badge" role="listitem">Sweat-resistant</span>
-</div>
-<!-- Benefit bullets -->
-<ul aria-label="Key benefits" class="buybox-bullets">
-<li class="buybox-bullet">
-<svg aria-hidden="true" viewbox="0 0 20 20"><circle cx="10" cy="10" r="9" stroke-width="1.5"></circle><path d="M6.5 10l2.5 2.5 4.5-4.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-<span>Covers thinning areas instantly</span>
-</li>
-<li class="buybox-bullet">
-<svg aria-hidden="true" viewbox="0 0 20 20"><circle cx="10" cy="10" r="9" stroke-width="1.5"></circle><path d="M6.5 10l2.5 2.5 4.5-4.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-<span>Sweat-resistant, long-lasting hold</span>
-</li>
-<li class="buybox-bullet">
-<svg aria-hidden="true" viewbox="0 0 20 20"><circle cx="10" cy="10" r="9" stroke-width="1.5"></circle><path d="M6.5 10l2.5 2.5 4.5-4.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-<span>Looks like real hair, virtually undetectable</span>
-</li>
-</ul>
-<div aria-hidden="true" class="buybox-divider"></div>
-<!-- Color guide -->
-<button aria-controls="colorGuideModal" aria-haspopup="dialog" class="color-guide-btn" id="colorGuideBtn">
-<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+    <!-- LEFT: Image Gallery -->
+    <div class="hero-gallery">
+      <!-- Main image -->
+      <div class="gallery-main" id="galleryMain" role="img" aria-label="Product image">
+        <img loading="eager" fetchpriority="high" width="1800" height="1800" id="galleryMainImg" src="images/pack-2-angle.webp" class="active" alt="MELD multi-pack at two angles" data-thumb="0">
+        <button type="button" class="gallery-nav gallery-nav-prev" id="galleryPrev" aria-label="Previous image">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <button type="button" class="gallery-nav gallery-nav-next" id="galleryNext" aria-label="Next image">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+        </button>
+      </div>
+      <!-- Thumbnails -->
+      <div class="gallery-thumbs" role="list" aria-label="Product images">
+        <!-- Thumb 1: multi-pack 2-angle (active default) -->
+        <div class="gallery-thumb active" role="listitem" data-index="0" tabindex="0" aria-label="Multi-pack, two angles">
+          <img loading="lazy" decoding="async" width="1800" height="1800" src="images/pack-2-angle.webp" class="active" alt="MELD multi-pack at two angles">
+        </div>
+        <!-- Thumb 2: video -->
+        <div class="gallery-thumb" role="listitem" data-index="1" tabindex="0" aria-label="Application video">
+          <img loading="lazy" decoding="async" width="1800" height="1800" src="images/video-thumb.webp" class="active" alt="Application video">
+          <div class="thumb-play-badge" aria-hidden="true">
+            <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="17" fill="rgba(26,26,26,0.55)"/><polygon points="14,11 28,18 14,25" fill="rgba(239,233,219,0.7)"/></svg>
+          </div>
+        </div>
+        <!-- Thumb 3: application close-up -->
+        <div class="gallery-thumb" role="listitem" data-index="2" tabindex="0" aria-label="Application demo">
+          <img loading="lazy" decoding="async" width="1800" height="1800" src="images/apply-demo.webp" class="active" alt="Application demo">
+        </div>
+        <!-- Thumb 4: lifestyle marble -->
+        <div class="gallery-thumb" role="listitem" data-index="3" tabindex="0" aria-label="Lifestyle on marble surface">
+          <img loading="lazy" decoding="async" width="2400" height="1792" src="images/lifestyle-marble.webp" class="active" alt="MELD compact on marble surface">
+        </div>
+        <!-- Thumb 5: lifestyle wood -->
+        <div class="gallery-thumb" role="listitem" data-index="4" tabindex="0" aria-label="Lifestyle on wood surface">
+          <img loading="lazy" decoding="async" width="1800" height="1344" src="images/lifestyle-wood.webp" class="active" alt="MELD compact on wood surface">
+        </div>
+        <!-- Thumb 6: macro label detail -->
+        <div class="gallery-thumb" role="listitem" data-index="5" tabindex="0" aria-label="Macro label detail">
+          <img loading="lazy" decoding="async" width="1800" height="1800" src="images/jar-5-macro.webp" class="active" alt="MELD compact macro label detail">
+        </div>
+        <!-- Thumb 7: lifestyle nightstand scene -->
+        <div class="gallery-thumb" role="listitem" data-index="6" tabindex="0" aria-label="Lifestyle on wooden nightstand">
+          <img loading="lazy" decoding="async" width="2752" height="1536" src="images/lifestyle-nightstand.webp" class="active" alt="MELD compact on wooden nightstand with towel and plant">
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Buy Box -->
+    <div class="hero-buybox" aria-label="Purchase options">
+
+      <!-- Stars -->
+      <div class="buybox-stars">
+        <div class="stars-row" aria-label="5 star rating" role="img">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span class="stars-label">Excellent</span>
+      </div>
+
+      <!-- Title -->
+      <div class="buybox-title-row">
+        <h1 class="buybox-title">Hair Density Filler for Men</h1>
+      </div>
+
+      <!-- Feature badges -->
+      <div class="buybox-feature-badges" role="list" aria-label="Product features">
+        <span class="buybox-badge" role="listitem">Long-lasting</span>
+        <span class="buybox-badge" role="listitem">No Mess</span>
+        <span class="buybox-badge" role="listitem">Sweat-resistant</span>
+      </div>
+
+      <!-- Benefit bullets -->
+      <ul class="buybox-bullets" aria-label="Key benefits">
+        <li class="buybox-bullet">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke-width="1.5"/><path d="M6.5 10l2.5 2.5 4.5-4.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Covers thinning areas instantly</span>
+        </li>
+        <li class="buybox-bullet">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke-width="1.5"/><path d="M6.5 10l2.5 2.5 4.5-4.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Sweat-resistant, long-lasting hold</span>
+        </li>
+        <li class="buybox-bullet">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke-width="1.5"/><path d="M6.5 10l2.5 2.5 4.5-4.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Looks like real hair, virtually undetectable</span>
+        </li>
+      </ul>
+
+      <div class="buybox-divider" aria-hidden="true"></div>
+
+      <!-- Color guide -->
+      <button class="color-guide-btn" id="colorGuideBtn" aria-haspopup="dialog" aria-controls="colorGuideModal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         Color guide
       </button>
-<!-- Color selector -->
-<div>
-<p class="buybox-color-label">Select your color: <span id="selectedColorName">Black</span></p>
-<div aria-label="Select shade" class="color-swatches" role="radiogroup">
-<button aria-checked="true" aria-label="Black" class="color-swatch active" data-name="Black" role="radio" style="background:#1A1200;"></button>
-<button aria-checked="false" aria-label="Dark Brown" class="color-swatch" data-name="Dark Brown" role="radio" style="background:#3D2210;"></button>
-<button aria-checked="false" aria-label="Light Brown" class="color-swatch" data-name="Light Brown" role="radio" style="background:#7B4A25;"></button>
-<button aria-checked="false" aria-label="Blonde" class="color-swatch" data-name="Blonde" role="radio" style="background:#C19A6B;"></button>
-</div>
-</div>
-<!-- Plan selector -->
-<div>
-<p class="plan-selector-label">Choose your plan:</p>
-<div aria-label="Choose a plan" class="plan-options" role="radiogroup">
-<!-- Plan A: B2G1. NOT the default (Daniel 2026-07-14): defaulting cold traffic into the
-               3-jar bundle burns all 500 jars for $4,195 of contribution vs $10,750+ as singles.
-               The bundle only ever made sense as a subscription, and that was never built. -->
-<button aria-label="Buy 2 Get 1 Free" aria-pressed="false" class="plan-btn" data-plan="a" id="planA">
-<span class="plan-name">Buy 2 Get 1 Free</span>
-<span class="plan-price-row">
-<span class="plan-price">$15</span>
-<span class="plan-per">/ per jar</span>
-<span class="plan-was">$39</span>
-</span>
-<span class="plan-supply">3 Month Supply</span>
-<span class="plan-total"><strong>$46</strong> total</span>
-<span class="plan-feature">Free Shade Swap</span>
-<span class="plan-save-tag">Save 61%</span>
-</button>
-<!-- Plan B: 1 Jar. THE DEFAULT (Daniel 2026-07-14). Lowest-risk entry for a first-time
-               buyer of an unknown brand, and the best use of a 500-jar test batch: $21.60
-               contribution per jar vs $8.44 in the bundle. -->
-<button aria-label="1 Jar" aria-pressed="true" class="plan-btn selected" data-plan="b" id="planB">
-<span class="plan-name">1 Jar</span>
-<span class="plan-price-row">
-<span class="plan-price">$35</span>
-<span class="plan-per">/ per jar</span>
-<span class="plan-was">$39</span>
-</span>
-<span class="plan-supply">1 Month Supply</span>
-<span class="plan-total"><strong>$35</strong> total</span>
-<span class="plan-feature">Free Shade Swap</span>
-<span class="plan-save-tag">Save 10%</span>
-</button>
-</div>
-<p class="plan-spec">Net weight: <strong>4g / 0.14oz</strong> per jar.</p>
-</div>
-<!-- Free gifts -->
-<div aria-label="Free gifts included" class="free-gifts">
-<p class="free-gifts-header">Free gifts included:</p>
-<div class="free-gifts-row">
-<!-- Applicator -->
-<div class="free-gift">
-<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle><line x1="12" x2="12" y1="2" y2="7"></line><line x1="12" x2="12" y1="17" y2="22"></line></svg>
-<span class="free-gift-name">Built-In<br/>Applicator</span>
-<span class="free-gift-val"> </span>
-<span class="free-gift-free">INCLUDED</span>
-</div>
-<!-- Shipping (highlighted, middle) -->
-<div class="free-gift highlight">
-<svg aria-hidden="true" viewbox="0 0 24 24"><rect height="13" width="15" x="1" y="3"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-<span class="free-gift-name">Free<br/>Shipping</span>
-<span class="free-gift-val">$4.90</span>
-<span class="free-gift-free">FREE</span>
-</div>
-<!-- Shade swap -->
-<div class="free-gift">
-<svg aria-hidden="true" viewbox="0 0 24 24"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"></path></svg>
-<span class="free-gift-name">Free Shade<br/>Swap</span>
-<span class="free-gift-val">$5.90</span>
-<span class="free-gift-free">FREE</span>
-</div>
-</div>
-</div>
-<!-- Rating at the decision point -->
 
-<!-- Add to Cart -->
-<button aria-label="Add to cart" class="buybox-cta" id="ctaBtn">
-<span id="ctaLabel">Add to Cart · Black</span>
-<span class="buybox-cta-sep">|</span>
-<span class="buybox-cta-price" id="ctaPrice">$46</span>
-</button>
-<!-- Trust line -->
-<div aria-label="Shipping and guarantee" class="buybox-trust-line">
-<span class="trust-item">
-<svg aria-hidden="true" viewbox="0 0 24 24"><rect height="13" width="15" x="1" y="3"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+      <!-- Color selector -->
+      <div>
+        <p class="buybox-color-label">Select your color: <span id="selectedColorName">Black</span></p>
+        <div class="color-swatches" role="radiogroup" aria-label="Select shade">
+          <button class="color-swatch active" style="background:#1A1200;" data-name="Black" aria-label="Black" aria-checked="true" role="radio"></button>
+          <button class="color-swatch" style="background:#3D2210;" data-name="Dark Brown" aria-label="Dark Brown" aria-checked="false" role="radio"></button>
+          <button class="color-swatch" style="background:#7B4A25;" data-name="Light Brown" aria-label="Light Brown" aria-checked="false" role="radio"></button>
+          <button class="color-swatch" style="background:#C19A6B;" data-name="Blonde" aria-label="Blonde" aria-checked="false" role="radio"></button>
+        </div>
+      </div>
+
+      <!-- Plan selector -->
+      <div>
+        <p class="plan-selector-label">Choose your plan:</p>
+        <div class="plan-options" role="radiogroup" aria-label="Choose a plan">
+
+          <!-- Plan A: B2G1 Most Popular -->
+          <button class="plan-btn selected" id="planA" data-plan="a" aria-pressed="true" aria-label="Buy 2 Get 1 Free, most popular">
+            <span class="plan-popular-tag" aria-hidden="true">Most Popular</span>
+            <span class="plan-name">Buy 2 Get 1 Free</span>
+            <span class="plan-price-row">
+              <span class="plan-price">$23</span>
+              <span class="plan-per">/ per jar</span>
+              <span class="plan-was">$39</span>
+            </span>
+            <span class="plan-supply">3 Month Supply</span>
+            <span class="plan-feature">Free Shade Swap</span>
+            <span class="plan-save-tag">Save 41%</span>
+          </button>
+
+          <!-- Plan B: 1 Jar -->
+          <button class="plan-btn" id="planB" data-plan="b" aria-pressed="false" aria-label="1 Jar">
+            <span class="plan-name">1 Jar</span>
+            <span class="plan-price-row">
+              <span class="plan-price">$35</span>
+              <span class="plan-per">/ per jar</span>
+              <span class="plan-was">$39</span>
+            </span>
+            <span class="plan-supply">1 Month Supply</span>
+            <span class="plan-feature">Free Shade Swap</span>
+            <span class="plan-save-tag">Save 10%</span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Free gifts -->
+      <div class="free-gifts" aria-label="Free gifts included">
+        <p class="free-gifts-header">Free gifts included:</p>
+        <div class="free-gifts-row">
+          <!-- Applicator -->
+          <div class="free-gift">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="22"/></svg>
+            <span class="free-gift-name">Built-In<br>Applicator</span>
+            <span class="free-gift-val">&nbsp;</span>
+            <span class="free-gift-free">INCLUDED</span>
+          </div>
+          <!-- Shipping (highlighted, middle) -->
+          <div class="free-gift highlight">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <span class="free-gift-name">Free<br>Shipping</span>
+            <span class="free-gift-val">$4.90</span>
+            <span class="free-gift-free">FREE</span>
+          </div>
+          <!-- Shade swap -->
+          <div class="free-gift">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/></svg>
+            <span class="free-gift-name">Free Shade<br>Swap</span>
+            <span class="free-gift-val">$5.90</span>
+            <span class="free-gift-free">FREE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add to Cart -->
+      <button class="buybox-cta" id="ctaBtn" aria-label="Add to cart">
+        <span id="ctaLabel">Add to Cart · Black</span>
+        <span class="buybox-cta-sep">|</span>
+        <span class="buybox-cta-price" id="ctaPrice">$46</span>
+      </button>
+
+      <!-- Trust line -->
+      <div class="buybox-trust-line" aria-label="Shipping and guarantee">
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           Ships within 24H
         </span>
-<span class="trust-item">
-<svg aria-hidden="true" viewbox="0 0 24 24"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"></path></svg>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/></svg>
           Free Color Swap
         </span>
-</div>
-</div><!-- /hero-buybox -->
-</div><!-- /hero-body -->
-<!-- Badge strip -->
-<div aria-label="Trust signals" class="hero-strip" role="list">
-<div class="hero-strip-inner">
-<div class="h-badge" role="listitem"><span aria-hidden="true" class="h-badge-dot"></span>Free Shade Swap Guarantee</div>
-<div class="h-badge" role="listitem"><span aria-hidden="true" class="h-badge-dot"></span>Free US shipping</div>
-<div class="h-badge" role="listitem"><span aria-hidden="true" class="h-badge-dot"></span>60-Day Risk-Free Trial</div>
-</div>
-</div>
+      </div>
+
+    </div><!-- /hero-buybox -->
+  </div><!-- /hero-body -->
+
+  <!-- Badge strip -->
+  <div class="hero-strip" role="list" aria-label="Trust signals">
+    <div class="hero-strip-inner">
+      <div class="h-badge" role="listitem"><span class="h-badge-dot" aria-hidden="true"></span>Free Shade Swap Guarantee</div>
+      <div class="h-badge" role="listitem"><span class="h-badge-dot" aria-hidden="true"></span>Free US shipping</div>
+      <div class="h-badge" role="listitem"><span class="h-badge-dot" aria-hidden="true"></span>60-Day Risk-Free Trial</div>
+    </div>
+  </div>
 </section>
+
 <!-- ================================================================
      COLOR GUIDE MODAL
 ================================================================ -->
-<div aria-labelledby="modalTitle" aria-modal="true" class="color-guide-modal" id="colorGuideModal" role="dialog">
-<div class="modal-box">
-<button aria-label="Close shade guide" class="modal-close" id="modalClose">✕</button>
-<span class="modal-code">// Shade Reference Guide</span>
-<h2 class="modal-title" id="modalTitle">Find Your Shade</h2>
-<img alt="MELD shade guide showing four shade options: Black, Dark Brown, Light Brown, Blonde" decoding="async" height="900" loading="lazy" src="images/shade-guide.webp" style="width:100%;height:auto;display:block;margin-bottom:20px;border:1px solid var(--hairline);" width="1592"/>
-<p class="modal-tip"><strong>Pro tip:</strong> when between two shades, choose the lighter option for a more natural, blended look. Wrong shade? We ship the correct one free.</p>
+<div class="color-guide-modal" id="colorGuideModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close shade guide">✕</button>
+    <span class="modal-code">// Shade Reference Guide</span>
+    <h2 class="modal-title" id="modalTitle">Find Your Shade</h2>
+    <img loading="lazy" decoding="async" width="1592" height="900" src="images/shade-guide.webp" alt="MELD shade guide showing four shade options: Black, Dark Brown, Light Brown, Blonde" style="width:100%;height:auto;display:block;margin-bottom:20px;border:1px solid var(--hairline);">
+    <p class="modal-tip"><strong>Pro tip:</strong> when between two shades, choose the lighter option for a more natural, blended look. Wrong shade? We ship the correct one free.</p>
+  </div>
 </div>
-</div>
+
 <!-- ================================================================
      SOCIAL PROOF ROW - LIGHT ALT
 ================================================================ -->
-<div aria-label="Social proof" class="social-proof" role="region">
-<div class="proof-row">
-<div class="proof-item">
-<span class="proof-val">60</span>
-<span class="proof-lbl">Day guarantee</span>
+<div class="social-proof" role="region" aria-label="Social proof">
+  <div class="proof-row">
+    <div class="proof-item">
+      <span class="proof-val">60</span>
+      <span class="proof-lbl">Day guarantee</span>
+    </div>
+    <div class="proof-sep" aria-hidden="true"></div>
+    <div class="proof-item">
+      <span class="proof-val">Free</span>
+      <span class="proof-lbl">Shade swap</span>
+    </div>
+    <div class="proof-sep" aria-hidden="true"></div>
+    <div class="proof-item">
+      <span class="proof-val">30s</span>
+      <span class="proof-lbl">To apply</span>
+    </div>
+    <div class="proof-sep" aria-hidden="true"></div>
+    <div class="proof-item">
+      <span class="proof-val">All-day</span>
+      <span class="proof-lbl">Long-lasting hold</span>
+    </div>
+  </div>
 </div>
-<div aria-hidden="true" class="proof-sep"></div>
-<div class="proof-item">
-<span class="proof-val">Free</span>
-<span class="proof-lbl">Shade swap</span>
-</div>
-<div aria-hidden="true" class="proof-sep"></div>
-<div class="proof-item">
-<span class="proof-val">30s</span>
-<span class="proof-lbl">To apply</span>
-</div>
-<div aria-hidden="true" class="proof-sep"></div>
-<div class="proof-item">
-<span class="proof-val">All-day</span>
-<span class="proof-lbl">Long-lasting hold</span>
-</div>
-</div>
-</div>
+
 <!-- ================================================================
      HOW IT WORKS - LIGHT
 ================================================================ -->
 <section class="how-it-works section-pad" id="how-it-works">
-<div class="container">
-<div class="section-header">
-<span class="section-code">// How It Works</span>
-<h2 class="section-headline">Coverage in under 30 seconds</h2>
-<p class="section-sub">Three steps. No mirror gymnastics. No salon appointment.</p>
-</div>
-<div class="steps-row">
-<div class="step-cell">
-<img alt="Part hair to expose the thinning area" decoding="async" height="1200" loading="lazy" src="images/step-1.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px;display:block;" width="1600"/>
-<div aria-hidden="true" class="step-numeral">I</div>
-<h3 class="step-title">Part to the thinning area</h3>
-<p class="step-body">On dry hair, part or comb so the thinning area is exposed. Any length works. No prep product needed.</p>
-</div>
-<div class="step-cell">
-<img alt="MELD applicator pressed against the scalp at the crown, with dense full coverage" decoding="async" height="896" loading="lazy" src="images/step-2.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px;display:block;" width="1200"/>
-<div aria-hidden="true" class="step-numeral">II</div>
-<h3 class="step-title">Pull, dab, apply.</h3>
-<p class="step-body">Pull the applicator off the bottom of the jar. Dab the foam pad into the powder, then press it onto your scalp at the thinning area. One press lays down a full dose. No shaking, no mess.</p>
-</div>
-<div class="step-cell">
-<img alt="Finished look, full dense coverage" decoding="async" height="896" loading="lazy" src="images/step-3.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px;display:block;" width="1200"/>
-<div aria-hidden="true" class="step-numeral">III</div>
-<h3 class="step-title">Walk out. No one knows.</h3>
-<p class="step-body">Long-lasting, sweat-resistant hold survives the gym and the commute. Removes cleanly with any shampoo. No residue, no buildup.</p>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-code">// How It Works</span>
+      <h2 class="section-headline">Coverage in under 30 seconds</h2>
+      <p class="section-sub">Three steps. No mirror gymnastics. No salon appointment.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step-cell">
+        <img loading="lazy" decoding="async" width="1600" height="1200" src="images/step-1.webp" alt="Part hair to expose the thinning area" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px;display:block;">
+        <div class="step-numeral" aria-hidden="true">I</div>
+        <h3 class="step-title">Part to the thinning area</h3>
+        <p class="step-body">On dry hair, part or comb so the thinning area is exposed. Any length works. No prep product needed.</p>
+      </div>
+      <div class="step-cell">
+        <img loading="lazy" decoding="async" width="1200" height="896" src="images/step-2.webp" alt="MELD applicator pressed against the scalp at the crown, with dense full coverage" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px;display:block;">
+        <div class="step-numeral" aria-hidden="true">II</div>
+        <h3 class="step-title">Pull, dab, apply.</h3>
+        <p class="step-body">Pull the applicator off the bottom of the jar. Dab the foam pad into the powder, then press it onto your scalp at the thinning area. One press lays down a full dose. No shaking, no mess.</p>
+      </div>
+      <div class="step-cell">
+        <img loading="lazy" decoding="async" width="1200" height="896" src="images/step-3.webp" alt="Finished look, full dense coverage" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px;display:block;">
+        <div class="step-numeral" aria-hidden="true">III</div>
+        <h3 class="step-title">Walk out. No one knows.</h3>
+        <p class="step-body">Long-lasting, sweat-resistant hold survives the gym and the commute. Removes cleanly with any shampoo. No residue, no buildup.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- ================================================================
      BEFORE / AFTER - LIGHT ALT
 ================================================================ -->
 <section class="before-after section-pad" id="before-after">
-<div class="container">
-<div class="section-header">
-<span class="section-code">// Before &amp; After</span>
-<h2 class="section-headline">See the difference</h2>
-<p class="section-sub">Four common thinning zones. Same result every time.</p>
-</div>
-<div class="ba-grid">
-<!-- Crown -->
-<div class="ba-pair">
-<div class="ba-images">
-<div aria-label="Crown, before" class="ba-slot before-slot" role="img">
-<img alt="Crown, before" decoding="async" height="425" loading="lazy" src="images/crown-before.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" width="400"/>
-<span class="ba-marker" style="position:relative;z-index:1;">Before</span>
-</div>
-<div aria-label="Crown, after" class="ba-slot after-slot" role="img">
-<img alt="Crown, after" decoding="async" height="425" loading="lazy" src="images/crown-after.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" width="400"/>
-<span class="ba-marker" style="position:relative;z-index:1;">After</span>
-</div>
-</div>
-<p class="ba-zone-label">Crown</p>
-</div>
-<!-- Diffused -->
-<div class="ba-pair">
-<div class="ba-images">
-<div aria-label="Diffused thinning, before" class="ba-slot before-slot" role="img">
-<img alt="Diffused thinning, before" decoding="async" height="425" loading="lazy" src="images/diffused-before.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" width="395"/>
-<span class="ba-marker" style="position:relative;z-index:1;">Before</span>
-</div>
-<div aria-label="Diffused thinning, after" class="ba-slot after-slot" role="img">
-<img alt="Diffused thinning, after" decoding="async" height="425" loading="lazy" src="images/diffused-after.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" width="395"/>
-<span class="ba-marker" style="position:relative;z-index:1;">After</span>
-</div>
-</div>
-<p class="ba-zone-label">Diffused</p>
-</div>
-<!-- Hairline -->
-<div class="ba-pair">
-<div class="ba-images">
-<div aria-label="Hairline, before" class="ba-slot before-slot" role="img">
-<img alt="Hairline, before" decoding="async" height="415" loading="lazy" src="images/hairline-before.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" width="400"/>
-<span class="ba-marker" style="position:relative;z-index:1;">Before</span>
-</div>
-<div aria-label="Hairline, after" class="ba-slot after-slot" role="img">
-<img alt="Hairline, after" decoding="async" height="415" loading="lazy" src="images/hairline-after.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" width="400"/>
-<span class="ba-marker" style="position:relative;z-index:1;">After</span>
-</div>
-</div>
-<p class="ba-zone-label">Hairline</p>
-</div>
-<!-- Temples -->
-<div class="ba-pair">
-<div class="ba-images">
-<div aria-label="Temples, before" class="ba-slot before-slot" role="img">
-<img alt="Temples, before" decoding="async" height="415" loading="lazy" src="images/temples-before.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" width="395"/>
-<span class="ba-marker" style="position:relative;z-index:1;">Before</span>
-</div>
-<div aria-label="Temples, after" class="ba-slot after-slot" role="img">
-<img alt="Temples, after" decoding="async" height="415" loading="lazy" src="images/temples-after.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" width="395"/>
-<span class="ba-marker" style="position:relative;z-index:1;">After</span>
-</div>
-</div>
-<p class="ba-zone-label">Temples</p>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-code">// Before &amp; After</span>
+      <h2 class="section-headline">See the difference</h2>
+      <p class="section-sub">Four common thinning zones. Same result every time.</p>
+    </div>
+    <div class="ba-grid">
+
+      <!-- Crown -->
+      <div class="ba-pair">
+        <div class="ba-images">
+          <div class="ba-slot before-slot" role="img" aria-label="Crown, before">
+            <img loading="lazy" decoding="async" width="400" height="425" src="images/crown-before.webp" alt="Crown, before" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+            <span class="ba-marker" style="position:relative;z-index:1;">Before</span>
+          </div>
+          <div class="ba-slot after-slot" role="img" aria-label="Crown, after">
+            <img loading="lazy" decoding="async" width="400" height="425" src="images/crown-after.webp" alt="Crown, after" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+            <span class="ba-marker" style="position:relative;z-index:1;">After</span>
+          </div>
+        </div>
+        <p class="ba-zone-label">Crown</p>
+      </div>
+
+      <!-- Diffused -->
+      <div class="ba-pair">
+        <div class="ba-images">
+          <div class="ba-slot before-slot" role="img" aria-label="Diffused thinning, before">
+            <img loading="lazy" decoding="async" width="395" height="425" src="images/diffused-before.webp" alt="Diffused thinning, before" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+            <span class="ba-marker" style="position:relative;z-index:1;">Before</span>
+          </div>
+          <div class="ba-slot after-slot" role="img" aria-label="Diffused thinning, after">
+            <img loading="lazy" decoding="async" width="395" height="425" src="images/diffused-after.webp" alt="Diffused thinning, after" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+            <span class="ba-marker" style="position:relative;z-index:1;">After</span>
+          </div>
+        </div>
+        <p class="ba-zone-label">Diffused</p>
+      </div>
+
+      <!-- Hairline -->
+      <div class="ba-pair">
+        <div class="ba-images">
+          <div class="ba-slot before-slot" role="img" aria-label="Hairline, before">
+            <img loading="lazy" decoding="async" width="400" height="415" src="images/hairline-before.webp" alt="Hairline, before" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+            <span class="ba-marker" style="position:relative;z-index:1;">Before</span>
+          </div>
+          <div class="ba-slot after-slot" role="img" aria-label="Hairline, after">
+            <img loading="lazy" decoding="async" width="400" height="415" src="images/hairline-after.webp" alt="Hairline, after" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+            <span class="ba-marker" style="position:relative;z-index:1;">After</span>
+          </div>
+        </div>
+        <p class="ba-zone-label">Hairline</p>
+      </div>
+
+      <!-- Temples -->
+      <div class="ba-pair">
+        <div class="ba-images">
+          <div class="ba-slot before-slot" role="img" aria-label="Temples, before">
+            <img loading="lazy" decoding="async" width="395" height="415" src="images/temples-before.webp" alt="Temples, before" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+            <span class="ba-marker" style="position:relative;z-index:1;">Before</span>
+          </div>
+          <div class="ba-slot after-slot" role="img" aria-label="Temples, after">
+            <img loading="lazy" decoding="async" width="395" height="415" src="images/temples-after.webp" alt="Temples, after" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+            <span class="ba-marker" style="position:relative;z-index:1;">After</span>
+          </div>
+        </div>
+        <p class="ba-zone-label">Temples</p>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 <!-- ================================================================
      CORE BENEFITS - LIGHT
 ================================================================ -->
 <section class="core-benefits section-pad" id="benefits">
-<div class="container">
-<div class="section-header">
-<span class="section-code">// Why MELD</span>
-<h2 class="section-headline">Built differently</h2>
-<p class="section-sub">The four things every other product gets wrong.</p>
-</div>
-<div class="benefits-grid">
-<div class="benefit-cell">
-<div aria-hidden="true" class="benefit-icon"><svg viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-<h3 class="benefit-title">Long-lasting, sweat-resistant hold</h3>
-<p class="benefit-body">Gym sessions, rain, humidity. The hold doesn't break until you shampoo it out.</p>
-</div>
-<div class="benefit-cell">
-<div aria-hidden="true" class="benefit-icon"><svg viewbox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
-<h3 class="benefit-title">Undetectable in daylight</h3>
-<p class="benefit-body">A fine micro-powder that matches the visual weight of real hair. No chalky residue. No flat patches. No obvious coverage line.</p>
-</div>
-<div class="benefit-cell">
-<div aria-hidden="true" class="benefit-icon"><svg viewbox="0 0 24 24"><rect height="13" width="15" x="1" y="3"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
-<h3 class="benefit-title">Ships in a plain box</h3>
-<p class="benefit-body">No brand name on the outside. What arrives at your door is between you and your mailbox.</p>
-</div>
-<div class="benefit-cell">
-<div aria-hidden="true" class="benefit-icon"><svg viewbox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg></div>
-<h3 class="benefit-title">No buildup. No residue.</h3>
-<p class="benefit-body">Lightweight, finely milled pigments that blend with your natural hair color. No chalky residue, no greasy feel.</p>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-code">// Why MELD</span>
+      <h2 class="section-headline">Built differently</h2>
+      <p class="section-sub">The four things every other product gets wrong.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-cell">
+        <div class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="benefit-title">Long-lasting, sweat-resistant hold</h3>
+        <p class="benefit-body">Gym sessions, rain, humidity. The hold doesn't break until you shampoo it out.</p>
+      </div>
+      <div class="benefit-cell">
+        <div class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 class="benefit-title">Undetectable in daylight</h3>
+        <p class="benefit-body">A fine micro-powder that matches the visual weight of real hair. No chalky residue. No flat patches. No obvious coverage line.</p>
+      </div>
+      <div class="benefit-cell">
+        <div class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3 class="benefit-title">Ships in a plain box</h3>
+        <p class="benefit-body">No brand name on the outside. What arrives at your door is between you and your mailbox.</p>
+      </div>
+      <div class="benefit-cell">
+        <div class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h3 class="benefit-title">No buildup. No residue.</h3>
+        <p class="benefit-body">Lightweight, finely milled pigments that blend with your natural hair color. No chalky residue, no greasy feel.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- ================================================================
      DURABILITY PROOF - LIGHT ALT
 ================================================================ -->
 <section class="durability section-pad" id="durability">
-<div class="container">
-<div class="section-header">
-<span class="section-code">// Tested</span>
-<h2 class="section-headline">We dare your lifestyle to break it</h2>
-<p class="section-sub">Tested across the four conditions that end every other product's day.</p>
-</div>
-<div class="durability-grid">
-<div class="durability-card">
-<div aria-hidden="true" class="durability-img"><img alt="Gym session" decoding="async" height="1344" loading="lazy" src="images/gym-session.webp" style="width:100%;height:100%;object-fit:cover;display:block;" width="1800"/></div>
-<div class="durability-card-body">
-<h3 class="durability-title">The gym session</h3>
-<p class="durability-copy">An hour on the squat rack. The powder is still locked. Same density. No transfer on the towel.</p>
-</div>
-</div>
-<div class="durability-card">
-<div aria-hidden="true" class="durability-img"><img alt="Rain / outdoor" decoding="async" height="1344" loading="lazy" src="images/rain-outdoor.webp" style="width:100%;height:100%;object-fit:cover;display:block;" width="1800"/></div>
-<div class="durability-card-body">
-<h3 class="durability-title">Caught in the rain</h3>
-<p class="durability-copy">Running to the car. Full downpour. The hold doesn't release until you choose to shampoo it out.</p>
-</div>
-</div>
-<div class="durability-card">
-<div aria-hidden="true" class="durability-img"><img alt="Hot / humid" decoding="async" height="1344" loading="lazy" src="images/hot-humid.webp" style="width:100%;height:100%;object-fit:cover;display:block;" width="1800"/></div>
-<div class="durability-card-body">
-<h3 class="durability-title">Florida in August</h3>
-<p class="durability-copy">High humidity, direct sun. The powder holds without pilling or lifting. Natural-looking all day.</p>
-</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-code">// Tested</span>
+      <h2 class="section-headline">We dare your lifestyle to break it</h2>
+      <p class="section-sub">Tested across the four conditions that end every other product's day.</p>
+    </div>
+    <div class="durability-grid">
+      <div class="durability-card">
+        <div class="durability-img" aria-hidden="true"><img loading="lazy" decoding="async" width="1800" height="1344" src="images/gym-session.webp" alt="Gym session" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="durability-card-body">
+          <h3 class="durability-title">The gym session</h3>
+          <p class="durability-copy">An hour on the squat rack. The powder is still locked. Same density. No transfer on the towel.</p>
+        </div>
+      </div>
+      <div class="durability-card">
+        <div class="durability-img" aria-hidden="true"><img loading="lazy" decoding="async" width="1800" height="1344" src="images/rain-outdoor.webp" alt="Rain / outdoor" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="durability-card-body">
+          <h3 class="durability-title">Caught in the rain</h3>
+          <p class="durability-copy">Running to the car. Full downpour. The hold doesn't release until you choose to shampoo it out.</p>
+        </div>
+      </div>
+      <div class="durability-card">
+        <div class="durability-img" aria-hidden="true"><img loading="lazy" decoding="async" width="1800" height="1344" src="images/hot-humid.webp" alt="Hot / humid" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="durability-card-body">
+          <h3 class="durability-title">Florida in August</h3>
+          <p class="durability-copy">High humidity, direct sun. The powder holds without pilling or lifting. Natural-looking all day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- ================================================================
      UGC REVIEWS - LIGHT
 ================================================================ -->
 <section class="ugc-reviews section-pad" id="reviews">
-<div class="container">
-<div class="section-header">
-<span class="section-code">// Why MELD</span>
-<h2 class="section-headline">Buy it with zero risk</h2>
-<p class="section-sub">A new brand earns trust the honest way. Here is ours, in writing.</p>
-</div>
-<div class="why-grid">
-<div class="why-card">
-<h4 class="why-title">60-day money-back guarantee</h4>
-<p class="why-body">Use it for two months. If it is not for you, email us for a full refund. No return required.</p>
-</div>
-<div class="why-card">
-<h4 class="why-title">Free shade swap</h4>
-<p class="why-body">Wrong shade? We send the right one free. You never eat the cost of matching your hair.</p>
-</div>
-<div class="why-card">
-<h4 class="why-title">US-made formula</h4>
-<p class="why-body">The formula is developed in the United States and filled to spec. Sweat-resistant, washes out with shampoo.</p>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-code">// Customer Reviews</span>
+      <h2 class="section-headline">What they're saying</h2>
+      <p class="section-sub">Real customers. Real results. No transformation theatre.</p>
+    </div>
+    <div class="ugc-grid">
+
+      <!-- Review 1 -->
+      <div class="ugc-card">
+        <div class="ugc-img-box" aria-hidden="true"><img loading="lazy" decoding="async" width="1800" height="1800" src="images/ugc-1.webp" alt="Customer photo 1" class="loaded"></div>
+        <div class="ugc-card-body">
+          <div class="ugc-stars" aria-label="5 stars" role="img">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h4 class="ugc-headline">Finally looks natural</h4>
+          <blockquote class="ugc-quote">"I've tried a few hair powders before, but this one actually blends in properly. It gives my hair a fuller look without making it obvious I'm using anything. Definitely keeping this in my routine."</blockquote>
+          <p class="ugc-name">Marcus R., Chicago</p>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="ugc-card">
+        <div class="ugc-img-box" aria-hidden="true"><img loading="lazy" decoding="async" width="1800" height="1800" src="images/ugc-2.webp" alt="Customer photo 2" class="loaded"></div>
+        <div class="ugc-card-body">
+          <div class="ugc-stars" aria-label="5 stars" role="img">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h4 class="ugc-headline">Confidence in seconds</h4>
+          <blockquote class="ugc-quote">"I was honestly surprised by how quick it works. A few seconds in the morning and my hair looks thicker, cleaner, and more styled. It's simple, but it makes a big difference."</blockquote>
+          <p class="ugc-name">Ryan P., Dallas</p>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="ugc-card">
+        <div class="ugc-img-box" aria-hidden="true"><img loading="lazy" decoding="async" width="1800" height="1800" src="images/ugc-3.webp" alt="Customer photo 3" class="loaded"></div>
+        <div class="ugc-card-body">
+          <div class="ugc-stars" aria-label="5 stars" role="img">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h4 class="ugc-headline">Way better than expected</h4>
+          <blockquote class="ugc-quote">"I thought this would be another product that overpromises, but it actually does what it says. The coverage looks natural, doesn't feel heavy, and helps me feel more confident going out."</blockquote>
+          <p class="ugc-name">Alex M., Miami</p>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="ugc-card">
+        <div class="ugc-img-box" aria-hidden="true"><img loading="lazy" decoding="async" width="1800" height="1800" src="images/ugc-4.webp" alt="Customer photo 4" class="loaded"></div>
+        <div class="ugc-card-body">
+          <div class="ugc-stars" aria-label="5 stars" role="img">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h4 class="ugc-headline">Part of my daily routine now</h4>
+          <blockquote class="ugc-quote">"This has become one of those products I don't leave the house without. It makes my hair look denser without looking fake, and the application is super easy."</blockquote>
+          <p class="ugc-name">Nathan L., Denver</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 <!-- ================================================================
      GET MELD CTA - LIGHT ALT
 ================================================================ -->
 <section class="get-meld section-pad" id="order">
-<div class="container">
-<div class="get-meld-inner">
-<h2 class="section-headline">Try it with zero risk</h2>
-<p class="section-sub" style="margin-bottom:36px;">One jar, $35. If it is not for you, the 60-day guarantee has you covered.</p>
-<a class="btn-primary" id="orderCtaBtn" role="button" tabindex="0">Add to Cart</a>
-<p class="get-meld-footnote">60-day money-back. Free Shade Swap.</p>
-</div>
-</div>
+  <div class="container">
+    <div class="get-meld-inner">
+      <h2 class="section-headline">Ready to lock in your supply?</h2>
+      <p class="section-sub" style="margin-bottom:36px;">Most customers order the 3-jar bundle and never reorder manually.</p>
+      <a class="btn-primary" id="orderCtaBtn" role="button" tabindex="0">Order 3 Jars · $46</a>
+      <p class="get-meld-footnote">60-day money-back. Free Shade Swap.</p>
+    </div>
+  </div>
 </section>
+
 <!-- ================================================================
      COMPATIBILITY MATRIX - LIGHT ALT
 ================================================================ -->
 <section class="compatibility section-pad" id="compatibility">
-<div class="container">
-<div class="section-header">
-<span class="section-code">// Is MELD Right for You</span>
-<h2 class="section-headline">Is MELD right for you?</h2>
-<p class="section-sub">We'd rather qualify you honestly than sell to the wrong customer.</p>
-</div>
-<div class="compat-cols">
-<div class="compat-col">
-<h3 class="compat-col-head">MELD works if you:</h3>
-<ul class="compat-list">
-<li><span aria-hidden="true" class="ci">✓</span> Have thinning hair with some coverage remaining (Norwood 1–3 range)</li>
-<li><span aria-hidden="true" class="ci">✓</span> Want coverage that looks and feels like your own hair</li>
-<li><span aria-hidden="true" class="ci">✓</span> Are active: gym, sport, outdoor lifestyle</li>
-<li><span aria-hidden="true" class="ci">✓</span> Want to apply at home in under 30 seconds, no salon</li>
-<li><span aria-hidden="true" class="ci">✓</span> Have straight, wavy, curly, or coily hair texture</li>
-<li><span aria-hidden="true" class="ci">✓</span> Want a non-surgical, non-topical cosmetic option</li>
-</ul>
-</div>
-<div class="compat-col">
-<h3 class="compat-col-head">Consider an alternative if you:</h3>
-<ul class="compat-list">
-<li><span aria-hidden="true" class="cx">×</span> Have complete bald patches with no hair for the powder to bond to</li>
-<li><span aria-hidden="true" class="cx">×</span> Are looking for a permanent solution or a medical hair-loss treatment</li>
-<li><span aria-hidden="true" class="cx">×</span> Have a scalp condition that reacts to cosmetic powders</li>
-<li><span aria-hidden="true" class="cx">×</span> Want something you never have to think about applying each day</li>
-</ul>
-<p class="compat-note">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-code">// Is MELD Right for You</span>
+      <h2 class="section-headline">Is MELD right for you?</h2>
+      <p class="section-sub">We'd rather qualify you honestly than sell to the wrong customer.</p>
+    </div>
+    <div class="compat-cols">
+      <div class="compat-col">
+        <h3 class="compat-col-head">MELD works if you:</h3>
+        <ul class="compat-list">
+          <li><span class="ci" aria-hidden="true">✓</span> Have thinning hair with some coverage remaining (Norwood 1–3 range)</li>
+          <li><span class="ci" aria-hidden="true">✓</span> Want coverage that looks and feels like your own hair</li>
+          <li><span class="ci" aria-hidden="true">✓</span> Are active: gym, sport, outdoor lifestyle</li>
+          <li><span class="ci" aria-hidden="true">✓</span> Want to apply at home in under 30 seconds, no salon</li>
+          <li><span class="ci" aria-hidden="true">✓</span> Have straight, wavy, curly, or coily hair texture</li>
+          <li><span class="ci" aria-hidden="true">✓</span> Want a non-surgical, non-topical cosmetic option</li>
+        </ul>
+      </div>
+      <div class="compat-col">
+        <h3 class="compat-col-head">Consider an alternative if you:</h3>
+        <ul class="compat-list">
+          <li><span class="cx" aria-hidden="true">×</span> Have complete bald patches with no hair for the powder to bond to</li>
+          <li><span class="cx" aria-hidden="true">×</span> Are looking for a permanent solution or a medical hair-loss treatment</li>
+          <li><span class="cx" aria-hidden="true">×</span> Have a scalp condition that reacts to cosmetic powders</li>
+          <li><span class="cx" aria-hidden="true">×</span> Want something you never have to think about applying each day</li>
+        </ul>
+        <p class="compat-note">
           Not sure? Email us at hello@meldhair.com with a photo of your coverage area and we'll tell you straight whether MELD is the right fit, before you spend a dollar.
         </p>
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- ================================================================
      COMPARISON TABLE - LIGHT
 ================================================================ -->
 <section class="comparison section-pad" id="comparison">
-<div class="container">
-<div class="section-header">
-<span class="section-code">// How It Stacks Up</span>
-<h2 class="section-headline">How it stacks up</h2>
-<p class="section-sub">MELD vs. the category. We left the wins on their side.</p>
-</div>
-<div class="compare-wrap">
-<table class="compare-table">
-<thead>
-<tr>
-<th scope="col">Feature</th>
-<th class="meld-col" scope="col">MELD</th>
-<th scope="col">Toppik</th>
-<th scope="col">Hairo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>60-day money-back guarantee</td>
-<td class="meld-col"><span class="cy">✓</span></td>
-<td><span class="cn">✗</span></td>
-<td><span class="cy">60 days</span></td>
-</tr>
-<tr>
-<td>Free shade swap guarantee</td>
-<td class="meld-col"><span class="cy">✓</span></td>
-<td><span class="cn">✗</span></td>
-<td><span class="cy">✓</span></td>
-</tr>
-<tr>
-<td>Long-lasting hold</td>
-<td class="meld-col"><span class="cy">✓</span></td>
-<td><span class="cp">Partial</span></td>
-<td><span class="cy">✓</span></td>
-</tr>
-<tr>
-<td>Buy 2 Get 1 Free option</td>
-<td class="meld-col"><span class="cy">✓</span></td>
-<td><span class="cn">✗</span></td>
-<td><span class="cy">✓</span></td>
-</tr>
-<tr>
-<td>US-fulfilled, 3–5 day shipping</td>
-<td class="meld-col"><span class="cy">✓</span></td>
-<td><span class="cy">✓</span></td>
-<td><span class="cn">✗</span></td>
-</tr>
-<tr>
-<td>Works on all hair textures</td>
-<td class="meld-col"><span class="cy">✓</span></td>
-<td><span class="cy">✓</span></td>
-<td><span class="cy">✓</span></td>
-</tr>
-<tr>
-<td>US-based support</td>
-<td class="meld-col"><span class="cy">✓</span></td>
-<td><span class="cy">✓</span></td>
-<td><span class="cp">Unconfirmed</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-code">// How It Stacks Up</span>
+      <h2 class="section-headline">How it stacks up</h2>
+      <p class="section-sub">MELD vs. the category. We left the wins on their side.</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col" class="meld-col">MELD</th>
+            <th scope="col">Toppik</th>
+            <th scope="col">Hairo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>60-day money-back guarantee</td>
+            <td class="meld-col"><span class="cy">✓</span></td>
+            <td><span class="cn">✗</span></td>
+            <td><span class="cy">60 days</span></td>
+          </tr>
+          <tr>
+            <td>Free shade swap guarantee</td>
+            <td class="meld-col"><span class="cy">✓</span></td>
+            <td><span class="cn">✗</span></td>
+            <td><span class="cy">✓</span></td>
+          </tr>
+          <tr>
+            <td>Long-lasting hold</td>
+            <td class="meld-col"><span class="cy">✓</span></td>
+            <td><span class="cp">Partial</span></td>
+            <td><span class="cy">✓</span></td>
+          </tr>
+          <tr>
+            <td>Buy 2 Get 1 Free option</td>
+            <td class="meld-col"><span class="cy">✓</span></td>
+            <td><span class="cn">✗</span></td>
+            <td><span class="cy">✓</span></td>
+          </tr>
+          <tr>
+            <td>US-fulfilled, 3–5 day shipping</td>
+            <td class="meld-col"><span class="cy">✓</span></td>
+            <td><span class="cy">✓</span></td>
+            <td><span class="cn">✗</span></td>
+          </tr>
+          <tr>
+            <td>Works on all hair textures</td>
+            <td class="meld-col"><span class="cy">✓</span></td>
+            <td><span class="cy">✓</span></td>
+            <td><span class="cy">✓</span></td>
+          </tr>
+          <tr>
+            <td>US-based support</td>
+            <td class="meld-col"><span class="cy">✓</span></td>
+            <td><span class="cy">✓</span></td>
+            <td><span class="cp">Unconfirmed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
+
 <!-- ================================================================
      FAQ - LIGHT ALT
 ================================================================ -->
 <section class="faq section-pad" id="faq">
-<div class="container">
-<div class="section-header">
-<span class="section-code">// Common Questions</span>
-<h2 class="section-headline">Your questions, answered</h2>
-</div>
-<div class="faq-list" role="list">
-<div class="faq-item" role="listitem">
-<button aria-controls="faq-a-1" aria-expanded="false" class="faq-trigger">
-<span class="faq-q">Will this sweat off at the gym?</span>
-<span aria-hidden="true" class="faq-icon"></span>
-</button>
-<div class="faq-body" id="faq-a-1" role="region">
-<div class="faq-body-inner">
-<p class="faq-a">No. Meldfuse™ is our name for the way MELD's fine micro-powder clings to and blends with your existing hair for a long-lasting, sweat-resistant hold. It holds through sustained sweat and movement, across gym sessions, runs, and sport, and stays put until you shampoo it out. Towel-dry is fine and doesn't break the hold.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" role="listitem">
-<button aria-controls="faq-a-2" aria-expanded="false" class="faq-trigger">
-<span class="faq-q">How long does a jar last?</span>
-<span aria-hidden="true" class="faq-icon"></span>
-</button>
-<div class="faq-body" id="faq-a-2" role="region">
-<div class="faq-body-inner">
-<p class="faq-a">One to two months depending on your coverage area and how much you apply each session. Smaller thinning zones average closer to 8 weeks per jar. Larger coverage areas average 4–5 weeks. The B2G1 bundle gives most customers a 90-day supply.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" role="listitem">
-<button aria-controls="faq-a-3" aria-expanded="false" class="faq-trigger">
-<span class="faq-q">What if I pick the wrong shade?</span>
-<span aria-hidden="true" class="faq-icon"></span>
-</button>
-<div class="faq-body" id="faq-a-3" role="region">
-<div class="faq-body-inner">
-<p class="faq-a">Email us. We send the correct shade at no cost. Free Shade Swap is a standing policy, not a one-time exception. Getting the shade right is on us. If the new shade still doesn't work, you're inside your 60-day money-back window.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" role="listitem">
-<button aria-controls="faq-a-4" aria-expanded="false" class="faq-trigger">
-<span class="faq-q">Will my partner notice?</span>
-<span aria-hidden="true" class="faq-icon"></span>
-</button>
-<div class="faq-body" id="faq-a-4" role="region">
-<div class="faq-body-inner">
-<p class="faq-a">Not if you blend it. The micro-powder adds visual density to existing hair. It doesn't sit on top like a film. In normal indoor and outdoor lighting, it's indistinguishable from your own hair. The most common unsolicited feedback: "did you do something different with your hair?"</p>
-</div>
-</div>
-</div>
-<div class="faq-item" role="listitem">
-<button aria-controls="faq-a-5" aria-expanded="false" class="faq-trigger">
-<span class="faq-q">How does it ship?</span>
-<span aria-hidden="true" class="faq-icon"></span>
-</button>
-<div class="faq-body" id="faq-a-5" role="region">
-<div class="faq-body-inner">
-<p class="faq-a">In a plain brown or white box with no brand name or any indication of the contents on the outside. What you ordered is between you and your mailbox. Orders ship free within the US and arrive in 3–5 business days.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" role="listitem">
-<button aria-controls="faq-a-6" aria-expanded="false" class="faq-trigger">
-<span class="faq-q">Is it safe for my scalp?</span>
-<span aria-hidden="true" class="faq-icon"></span>
-</button>
-<div class="faq-body" id="faq-a-6" role="region">
-<div class="faq-body-inner">
-<p class="faq-a">MELD is a topical powder that sits on the surface of your hair, not down on your scalp, and washes out completely with any shampoo. No residue, no buildup.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-code">// Common Questions</span>
+      <h2 class="section-headline">Your questions, answered</h2>
+    </div>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a-1">
+          <span class="faq-q">Will this sweat off at the gym?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-body" id="faq-a-1" role="region">
+          <div class="faq-body-inner">
+            <p class="faq-a">No. Meldfuse&trade; is our name for the way MELD's fine micro-powder clings to and blends with your existing hair for a long-lasting, sweat-resistant hold. It holds through sustained sweat and movement, across gym sessions, runs, and sport, and stays put until you shampoo it out. Towel-dry is fine and doesn't break the hold.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a-2">
+          <span class="faq-q">How long does a jar last?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-body" id="faq-a-2" role="region">
+          <div class="faq-body-inner">
+            <p class="faq-a">One to two months depending on your coverage area and how much you apply each session. Smaller thinning zones average closer to 8 weeks per jar. Larger coverage areas average 4–5 weeks. The B2G1 bundle gives most customers a 90-day supply.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a-3">
+          <span class="faq-q">What if I pick the wrong shade?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-body" id="faq-a-3" role="region">
+          <div class="faq-body-inner">
+            <p class="faq-a">Email us. We send the correct shade at no cost. Free Shade Swap is a standing policy, not a one-time exception. Getting the shade right is on us. If the new shade still doesn't work, you're inside your 60-day money-back window.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a-4">
+          <span class="faq-q">Will my partner notice?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-body" id="faq-a-4" role="region">
+          <div class="faq-body-inner">
+            <p class="faq-a">Not if you blend it. The micro-powder adds visual density to existing hair. It doesn't sit on top like a film. In normal indoor and outdoor lighting, it's indistinguishable from your own hair. The most common unsolicited feedback: "did you do something different with your hair?"</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a-5">
+          <span class="faq-q">How does it ship?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-body" id="faq-a-5" role="region">
+          <div class="faq-body-inner">
+            <p class="faq-a">In a plain brown or white box with no brand name or any indication of the contents on the outside. What you ordered is between you and your mailbox. Orders ship free within the US and arrive in 3–5 business days.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a-6">
+          <span class="faq-q">Is it safe for my scalp?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-body" id="faq-a-6" role="region">
+          <div class="faq-body-inner">
+            <p class="faq-a">MELD is a topical powder that sits on the surface of your hair, not down on your scalp, and washes out completely with any shampoo. No residue, no buildup.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 <!-- ================================================================
      FOOTER - DARK CHROME
 ================================================================ -->
 <footer class="site-footer" id="footer">
-<div class="footer-inner">
-<div class="footer-top">
-<div>
-<p class="footer-wordmark">MELD<span class="footer-wordmark-dot">.</span></p>
-<p class="footer-tagline">
-          Hair Density Filler.<br/>
-          Long-lasting. Undetectable.<br/>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-wordmark">MELD<span class="footer-wordmark-dot">.</span></p>
+        <p class="footer-tagline">
+          Hair Density Filler.<br>
+          Long-lasting. Undetectable.<br>
           Ships in a plain box.
         </p>
-</div>
-<div>
-<p class="footer-col-head">Support</p>
-<ul class="footer-links">
-<li><a href="mailto:hello@meldhair.com">hello@meldhair.com</a></li>
-<li><a href="/contact">Contact</a></li>
-<li><a href="/#order">Shade Guide</a></li>
-<li><a href="/refund-policy#shade-swap">Free Shade Swap</a></li>
-<li><a href="/refund-policy">Refund Policy</a></li>
-<li><a href="/shipping-policy">Shipping Policy</a></li>
-</ul>
-</div>
-<div>
-<p class="footer-col-head">Guides</p>
-<ul class="footer-links">
-<li><a href="/hair-density-filler-for-men">Hair density filler</a></li>
-<li><a href="/hairline-powder-for-men">Hairline powder</a></li>
-<li><a href="/toppik-alternative">Toppik alternative</a></li>
-<li><a href="/meld-vs-hairo">MELD vs Hairo</a></li>
-</ul>
-</div>
-<div>
-<p class="footer-col-head">Legal</p>
-<ul class="footer-links">
-<li><a href="/privacy">Privacy Policy</a></li>
-<li><a href="/terms">Terms of Service</a></li>
-<li><a href="/privacy#ca-privacy-rights">CA Privacy Rights</a></li>
-<li><a href="/privacy#do-not-sell">Do Not Sell My Info</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<p class="footer-private">© 2026 MELD. All rights reserved.</p>
-</div>
-</div>
+      </div>
+      <div>
+        <p class="footer-col-head">Support</p>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@meldhair.com">hello@meldhair.com</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/#order">Shade Guide</a></li>
+          <li><a href="/refund-policy#shade-swap">Free Shade Swap</a></li>
+          <li><a href="/refund-policy">Refund Policy</a></li>
+          <li><a href="/shipping-policy">Shipping Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-head">Guides</p>
+        <ul class="footer-links">
+          <li><a href="/hair-density-filler-for-men">Hair density filler</a></li>
+          <li><a href="/hairline-powder-for-men">Hairline powder</a></li>
+          <li><a href="/toppik-alternative">Toppik alternative</a></li>
+          <li><a href="/meld-vs-hairo">MELD vs Hairo</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-head">Legal</p>
+        <ul class="footer-links">
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/privacy#ca-privacy-rights">CA Privacy Rights</a></li>
+          <li><a href="/privacy#do-not-sell">Do Not Sell My Info</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-private">© 2026 MELD. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
+
 <!-- ================================================================
      STICKY CTA BAR
 ================================================================ -->
-<div aria-hidden="true" class="sticky-bar" id="stickyBar">
-<div class="sticky-bar-inner">
-<p class="sticky-copy"><strong id="stickyPromoText">MELD Hair Density Filler</strong> · Free US shipping · 60-day guarantee</p>
-<button class="sticky-cta" id="stickyCtaBtn">Add to Cart<span class="sticky-cta-price" id="stickyCtaPrice">$35</span></button>
+<div class="sticky-bar" id="stickyBar" aria-hidden="true">
+  <div class="sticky-bar-inner">
+    <p class="sticky-copy"><strong id="stickyPromoText">Buy 2 Get 1 Free</strong> · Free US shipping · 60-day guarantee</p>
+    <button class="sticky-cta" id="stickyCtaBtn">Order Now</button>
+  </div>
 </div>
-</div>
+
 <!-- ================================================================
      JAVASCRIPT
 ================================================================ -->
@@ -1429,8 +1479,6 @@
       var plan = this.dataset.plan;
       if (ctaPrice) ctaPrice.textContent = planData[plan].price;
       if (ctaWas)   ctaWas.textContent   = planData[plan].was;
-      var _sp = document.getElementById('stickyCtaPrice');
-      if (_sp) _sp.textContent = planData[plan].price;
 
       /* Reorder gallery thumbs by plan:
          3-Jar (a) -> slot 1 = multi-pack, slot 2 = video-thumb (with play badge)
@@ -1521,64 +1569,23 @@
     }
   })();
 
-  /* --- Sticky bar ---
-     Desktop: reveal once the hero (with its top-right buy box) scrolls out of view.
-     Mobile: price + Add to Cart must be reachable from the first paint (the in-page
-     buy box sits ~2 screens down under the gallery), so the bar shows on load and
-     hides only while the in-page CTA is actually on screen (no stacked double CTA). */
-  var heroEl    = document.getElementById('hero');
+  /* --- Sticky bar (IntersectionObserver on hero) --- */
+  var heroEl   = document.getElementById('hero');
   var stickyBar = document.getElementById('stickyBar');
-  var inlineCta = document.getElementById('ctaBtn');
-  var mqMobile  = window.matchMedia('(max-width: 768px)');
-  function showSticky() { stickyBar.classList.add('show'); stickyBar.removeAttribute('aria-hidden'); }
-  function hideSticky() { stickyBar.classList.remove('show'); stickyBar.setAttribute('aria-hidden', 'true'); }
-  if (stickyBar && 'IntersectionObserver' in window) {
-    if (heroEl) {
-      var ioHero = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (mqMobile.matches) return;            // mobile handled by the CTA observer below
-          if (!entry.isIntersecting) showSticky(); else hideSticky();
-        });
-      }, { threshold: 0.08 });
-      ioHero.observe(heroEl);
-    }
-    if (inlineCta) {
-      var ioCta = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (!mqMobile.matches) return;           // desktop handled by the hero observer above
-          if (entry.isIntersecting) hideSticky(); else showSticky();
-        });
-      }, { threshold: 0.5 });
-      ioCta.observe(inlineCta);
-    }
-    if (mqMobile.matches) showSticky();            // first paint on mobile, before any scroll
-    mqMobile.addEventListener('change', function() { // re-sync when crossing the breakpoint
-      if (mqMobile.matches) showSticky(); else hideSticky();
-    });
-  }
-
-  /* --- Before/after: force each image to load ~700px before it scrolls into view,
-         so a fast scroll can't outrun the lazy loader and flash the gray slot.
-         Degrades safely: if JS/IO is unavailable the images stay natively lazy. --- */
-  (function() {
-    var baImgs = document.querySelectorAll('.ba-slot img');
-    if (!baImgs.length) return;
-    if (!('IntersectionObserver' in window)) {
-      baImgs.forEach(function(im) { im.loading = 'eager'; });
-      return;
-    }
-    var io = new IntersectionObserver(function(entries, obs) {
+  if (heroEl && stickyBar && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var im = entry.target;
-          im.loading = 'eager';
-          if (im.decode) { im.decode().catch(function() {}); }
-          obs.unobserve(im);
+        if (!entry.isIntersecting) {
+          stickyBar.classList.add('show');
+          stickyBar.removeAttribute('aria-hidden');
+        } else {
+          stickyBar.classList.remove('show');
+          stickyBar.setAttribute('aria-hidden', 'true');
         }
       });
-    }, { rootMargin: '700px 0px' });
-    baImgs.forEach(function(im) { io.observe(im); });
-  })();
+    }, { threshold: 0.08 });
+    io.observe(heroEl);
+  }
 
   /* --- Smooth scroll for all anchor links --- */
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
@@ -1590,7 +1597,7 @@
   });
 
   /* --- Shopify checkout wiring --- */
-  var SHOP_DOMAIN = 'shop.meldhair.com';
+  var SHOP_DOMAIN = 'qs3wnm-af.myshopify.com';
   var VARIANT_MAP = {
     a: {
       'Black':       '53739435065712',
@@ -1613,37 +1620,29 @@
     var pb = document.querySelector('.plan-btn.selected');
     return (pb && pb.dataset.plan) ? pb.dataset.plan : 'a';
   }
-  /* Config for cart-drawer.js. The drawer keeps cart state in localStorage (Shopify's
-     Ajax Cart API sends no CORS headers, so a cross-origin drawer cannot use it) and
-     only hands off to Shopify when the buyer explicitly clicks Checkout. */
-  window.MELD_SHOP = {
-    domain: SHOP_DOMAIN,
-    variantMap: VARIANT_MAP,
-    currentPlan: currentPlan,
-    currentShade: currentShade,
-    image: '/images/pack-2-angle.webp',
-    plans: {
-      a: { label: 'Buy 2, Get 1 Free — 3 jars', price: 46, jars: 3 },
-      b: { label: '1 Jar', price: 35, jars: 1 }
-    }
-  };
-
-  function addToCart(planOverride) {
-    if (window.MELDCart) window.MELDCart.add(planOverride);
+  function buildCartUrl(planKey, shade) {
+    var p = planKey || currentPlan();
+    var s = shade || currentShade();
+    var vid = VARIANT_MAP[p] && VARIANT_MAP[p][s];
+    if (!vid) return null;
+    return 'https://' + SHOP_DOMAIN + '/cart/' + vid + ':1';
   }
-
+  function goToCheckout(planOverride) {
+    var url = buildCartUrl(planOverride);
+    if (url) window.location.href = url;
+  }
   var ctaBtn = document.getElementById('ctaBtn');
-  if (ctaBtn) ctaBtn.addEventListener('click', function() { addToCart(); });
+  if (ctaBtn) ctaBtn.addEventListener('click', function() { goToCheckout(); });
 
   var stickyCta = document.getElementById('stickyCtaBtn');
-  if (stickyCta) stickyCta.addEventListener('click', function() { addToCart(); });
+  if (stickyCta) stickyCta.addEventListener('click', function() { goToCheckout(); });
 
   var orderCta = document.getElementById('orderCtaBtn');
   if (orderCta) {
     orderCta.style.cursor = 'pointer';
-    orderCta.addEventListener('click', function() { addToCart(); });
+    orderCta.addEventListener('click', function() { goToCheckout('a'); });
     orderCta.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); addToCart(); }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goToCheckout('a'); }
     });
   }
 
@@ -1651,28 +1650,13 @@
   if (navCart) {
     navCart.addEventListener('click', function(e) {
       e.preventDefault();
-      if (window.MELDCart) window.MELDCart.open();
+      window.location.href = 'https://' + SHOP_DOMAIN + '/cart';
     });
   }
 </script>
-<link href="/cart-drawer.css" rel="stylesheet"/>
-<script defer="" src="/cart-drawer.js"></script>
+
 <!-- Exit-intent email-capture popup (10% off). Gated: needs a real MELD10 Shopify discount + W5 activation to capture. -->
-<script defer="" src="/exit-intent-popup.js"></script>
-<!-- Ad scent-match: echo the clicked ad's hook in the buybox eyebrow (organic traffic unaffected) -->
-<script>
-(function () {
-  var MAP = {
-    hairline: "Your hairline's best-kept secret",
-    shade:    "Wrong shade? We'll swap it free.",
-    ugc:      "Fuller-looking hair in 60 seconds"
-  };
-  try {
-    var key = new URLSearchParams(location.search).get('ad');
-    var el = document.getElementById('buyboxEyebrow');
-    if (el && key && MAP[key]) { el.textContent = MAP[key]; el.hidden = false; }
-  } catch (e) {}
-})();
-</script>
+<script src="/exit-intent-popup.js" defer></script>
+
 </body>
 </html>

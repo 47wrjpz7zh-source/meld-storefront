@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1A1A1A">
+  <meta name="robots" content="index, follow">
+  <title>Contact MELD | Orders, Shade Swaps, Refunds</title>
+  <meta name="description" content="Reach MELD support. Email hello@meldhair.com for orders, shade help, the Free Shade Swap, and refunds. MELD Hair LLC, Wyoming.">
+  <link rel="canonical" href="https://meldhair.com/contact">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/policies.css">
+  <script src="/consent.js" defer></script>
+</head>
+<body>
+  <header class="policy-header">
+    <div class="policy-header-inner">
+      <a href="/" class="policy-wordmark" aria-label="MELD home">MELD<span class="policy-wordmark-dot">.</span></a>
+      <a href="/" class="policy-back">&larr; Back to store</a>
+    </div>
+  </header>
+
+  <main class="policy-wrap">
+    <span class="policy-kicker">// Support</span>
+    <h1>Contact MELD: Orders, Shade Help, Returns</h1>
+    <p class="policy-updated">We answer every message ourselves. No bots, no phone tree.</p>
+
+    <p>Questions about a shade, an order, the Free Shade Swap, or a refund? Email us with your order number and, if it helps, a photo of your coverage area. We will tell you straight whether MELD is right for you, before or after you buy.</p>
+
+    <div class="policy-callout">
+      <p class="policy-contact-line">
+        <strong>Email:</strong> <a href="mailto:hello@meldhair.com">hello@meldhair.com</a><br>
+        <strong>Response time:</strong> within 1 business day (Mon to Fri)<br>
+        <strong>Mailing address:</strong> MELD Hair LLC, 1309 Coffeen Avenue, STE 1200, Sheridan, WY 82801
+      </p>
+    </div>
+
+    <h2>What we can help with</h2>
+    <ul>
+      <li><strong>Shade help.</strong> Not sure which of our four shades fits? Send a photo and we will recommend one.</li>
+      <li><strong>Free Shade Swap.</strong> Wrong shade? We send the correct one at no cost. See the <a href="/refund-policy#shade-swap">Free Shade Swap policy</a>.</li>
+      <li><strong>Orders and tracking.</strong> Status, address changes, and tracking. See the <a href="/shipping-policy">Shipping Policy</a>.</li>
+      <li><strong>Refunds.</strong> Covered by our 60-day money-back guarantee. See the <a href="/refund-policy">Refund Policy</a>.</li>
+      <li><strong>Wholesale and press.</strong> Email us with the subject line "Wholesale" or "Press".</li>
+    </ul>
+
+    <h2>Business information</h2>
+    <p>MELD is operated by MELD Hair LLC, a Wyoming limited liability company. All orders are fulfilled in the United States and ship in a plain, unbranded box.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <p class="footer-wordmark">MELD<span class="footer-wordmark-dot">.</span></p>
+          <p class="footer-tagline">Hair Density Filler.<br>Long-lasting. Undetectable.<br>Ships in a plain box.</p>
+        </div>
+        <div>
+          <p class="footer-col-head">Support</p>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@meldhair.com">hello@meldhair.com</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/#order">Shade Guide</a></li>
+            <li><a href="/refund-policy#shade-swap">Free Shade Swap</a></li>
+            <li><a href="/refund-policy">Refund Policy</a></li>
+            <li><a href="/shipping-policy">Shipping Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-head">Legal</p>
+          <ul class="footer-links">
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/privacy#ca-privacy-rights">CA Privacy Rights</a></li>
+            <li><a href="/privacy#do-not-sell">Do Not Sell My Info</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          <p class="footer-imprint-code">// Imprint</p>
+          <p class="footer-imprint">
+            MELD HAIR LLC · Wyoming<br>
+            © 2026 MELD Hair LLC · All rights reserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
