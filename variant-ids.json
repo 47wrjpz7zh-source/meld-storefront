@@ -11,7 +11,6 @@
   "single": {
     "_label": "1 Jar (1 Month Supply)",
     "_price": 35,
-    "_compareAt": 39,
     "_weightOz": 4,
     "black": {
       "variantId": "gid://shopify/ProductVariant/53739434803568",
@@ -33,7 +32,6 @@
   "b2g1": {
     "_label": "Buy 2 Get 1 Free (3 Month Supply)",
     "_price": 46,
-    "_compareAt": 117,
     "_weightOz": 12,
     "_math": "Pay for 2 jars at $23 each, receive 3 jars",
     "black": {
