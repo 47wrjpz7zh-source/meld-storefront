@@ -29,9 +29,13 @@
   var CTA_SELECTORS = '#ctaBtn, #stickyCtaBtn, #orderCtaBtn, .nav-cart';
 
   // Plan -> price + variant map (mirror of index.html VARIANT_MAP / variant-ids.json).
+  // KEEP IN SYNC: index.html VARIANT_MAP, variant-ids.json, and the 5 comparison
+  // sub-pages' B2G1_BLACK. Phase 21 (2026-07-16) moved B2G1 to a separate
+  // fixed-bundle product (15185853677936); the old bundle variants are DELETED and
+  // their cart permalinks now return HTTP 410.
   var PLAN_PRICE = { a: 46, b: 35 }; // a = Buy 2 Get 1 Free (default), b = 1 jar
   var VARIANT_MAP = {
-    a: { 'Black':'53739435065712','Dark Brown':'53739435098480','Light Brown':'53739435131248','Blonde':'53739435164016' },
+    a: { 'Black':'54044216263024','Dark Brown':'54044216295792','Light Brown':'54044216328560','Blonde':'54044216361328' },
     b: { 'Black':'53739434803568','Dark Brown':'53739434967408','Light Brown':'53739435000176','Blonde':'53739435032944' }
   };
 

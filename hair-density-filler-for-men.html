@@ -540,7 +540,7 @@
 <script>
   var SHOP_DOMAIN = 'shop.meldhair.com';
   /* Plan a = Buy 2 Get 1 Free (B2G1), Black shade default. Matches variant-ids.json + index.html. */
-  var B2G1_BLACK = '53739435065712';
+  var B2G1_BLACK = '54044216263024'; /* Phase 21 2026-07-16: B2G1 is now fixed-bundle product 15185853677936. The prior bundle variants were deleted; their cart permalinks return 410. KEEP IN SYNC: index.html VARIANT_MAP, variant-ids.json, meta-pixel.js, and the other 4 sub-pages. */
   var SINGLE_BLACK = '53739434803568';
   function cartUrl(vid){ return 'https://' + SHOP_DOMAIN + '/cart/' + vid + ':1'; }
   function goB2G1(){ window.location.href = cartUrl(B2G1_BLACK); }

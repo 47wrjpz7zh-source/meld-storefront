@@ -489,7 +489,7 @@
 </div>
 <script>
   var SHOP_DOMAIN = 'shop.meldhair.com';
-  var B2G1_BLACK = '53739435065712';
+  var B2G1_BLACK = '54044216263024'; /* Phase 21 2026-07-16: B2G1 is now fixed-bundle product 15185853677936. The prior bundle variants were deleted; their cart permalinks return 410. KEEP IN SYNC: index.html VARIANT_MAP, variant-ids.json, meta-pixel.js, and the other 4 sub-pages. */
   function cartUrl(vid){ return 'https://' + SHOP_DOMAIN + '/cart/' + vid + ':1'; }
   function goB2G1(){ window.location.href = cartUrl(B2G1_BLACK); }
   ['railCta','stickyCta','inlineCta1','inlineCta2','finalCta'].forEach(function(id){
