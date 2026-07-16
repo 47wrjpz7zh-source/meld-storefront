@@ -591,7 +591,7 @@
         "@type": "Offer",
         "name": "Buy 2 Get 1 Free (3 Month Supply)",
         "sku": "MELD-HDF-3J",
-        "price": "46.00",
+        "price": "59.00",
         "priceCurrency": "USD",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
@@ -782,11 +782,11 @@
 <button aria-pressed="false" class="plan-btn" data-plan="a" id="planA">
 <span class="plan-name">Buy 2 Get 1 Free</span>
 <span class="plan-price-row">
-<span class="plan-price">$15</span>
+<span class="plan-price">$19.67</span>
 <span class="plan-per">/ per jar</span>
 </span>
 <span class="plan-supply">3 Month Supply</span>
-<span class="plan-total"><strong>$46</strong> total</span>
+<span class="plan-total"><strong>$59</strong> total</span>
 <span class="plan-feature">Free Shade Swap</span>
 </button>
 <!-- Plan B: 1 Jar. THE DEFAULT (Daniel 2026-07-14). Lowest-risk entry for a first-time
@@ -838,7 +838,7 @@
 <button class="buybox-cta" id="ctaBtn">
 <span id="ctaLabel">Add to Cart · Black</span>
 <span class="buybox-cta-sep">|</span>
-<span class="buybox-cta-price" id="ctaPrice">$46</span>
+<span class="buybox-cta-price" id="ctaPrice">$59</span>
 </button>
 <!-- Trust line -->
 <div aria-label="Shipping and guarantee" class="buybox-trust-line">
@@ -1434,7 +1434,7 @@
   /* --- Plan selector --- */
   var ctaPrice = document.getElementById('ctaPrice');
   var ctaWas   = document.getElementById('ctaWas');
-  var planData = { a: { price: '$46', was: '' }, b: { price: '$35', was: '' } };
+  var planData = { a: { price: '$59', was: '' }, b: { price: '$35', was: '' } };
 
   document.querySelectorAll('.plan-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -1616,7 +1616,7 @@
     currentShade: currentShade,
     image: '/images/pack-2-angle.webp',
     plans: {
-      a: { label: 'Buy 2, Get 1 Free — 3 jars', price: 46, jars: 3 },
+      a: { label: 'Buy 2, Get 1 Free — 3 jars', price: 59, jars: 3 },
       b: { label: '1 Jar', price: 35, jars: 1 }
     }
   };

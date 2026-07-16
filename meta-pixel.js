@@ -33,7 +33,7 @@
   // sub-pages' B2G1_BLACK. Phase 21 (2026-07-16) moved B2G1 to a separate
   // fixed-bundle product (15185853677936); the old bundle variants are DELETED and
   // their cart permalinks now return HTTP 410.
-  var PLAN_PRICE = { a: 46, b: 35 }; // a = Buy 2 Get 1 Free (default), b = 1 jar
+  var PLAN_PRICE = { a: 59, b: 35 }; // a = Buy 2 Get 1 Free (default), b = 1 jar
   var VARIANT_MAP = {
     a: { 'Black':'54044216263024','Dark Brown':'54044216295792','Light Brown':'54044216328560','Blonde':'54044216361328' },
     b: { 'Black':'53739434803568','Dark Brown':'53739434967408','Light Brown':'53739435000176','Blonde':'53739435032944' }
@@ -99,7 +99,7 @@
       content_ids: vid ? [vid] : [],
       content_type: 'product',
       content_name: 'MELD Hair Density Filler',
-      value: PLAN_PRICE[currentPlan()] || 46,
+      value: PLAN_PRICE[currentPlan()] || 59,
       currency: CURRENCY
     });
 
@@ -110,7 +110,7 @@
         fbq('track', 'InitiateCheckout', {
           content_ids: v ? [v] : [],
           content_type: 'product',
-          value: PLAN_PRICE[currentPlan()] || 46,
+          value: PLAN_PRICE[currentPlan()] || 59,
           currency: CURRENCY,
           num_items: currentPlan() === 'a' ? 3 : 1
         });
