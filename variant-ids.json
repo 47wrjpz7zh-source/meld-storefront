@@ -34,20 +34,22 @@
     "_price": 46,
     "_weightOz": 12,
     "_math": "Pay for 2 jars at $23 each, receive 3 jars",
+    "_comment_2026_07_16": "Phase 21: B2G1 is now a fixed-bundle product (each variant = 3x the single-jar variant of the same shade), so a bundle sale deducts 3 real jars from the shared single pool. These variantIds live on the SEPARATE bundle product below, not on _product_id.",
+    "_bundle_product_id": "gid://shopify/Product/15185853677936",
     "black": {
-      "variantId": "gid://shopify/ProductVariant/53739435065712",
+      "variantId": "gid://shopify/ProductVariant/54044216263024",
       "sku": "MELD-HDF-BLK-3J"
     },
     "darkBrown": {
-      "variantId": "gid://shopify/ProductVariant/53739435098480",
+      "variantId": "gid://shopify/ProductVariant/54044216295792",
       "sku": "MELD-HDF-DBR-3J"
     },
     "lightBrown": {
-      "variantId": "gid://shopify/ProductVariant/53739435131248",
+      "variantId": "gid://shopify/ProductVariant/54044216328560",
       "sku": "MELD-HDF-LBR-3J"
     },
     "blonde": {
-      "variantId": "gid://shopify/ProductVariant/53739435164016",
+      "variantId": "gid://shopify/ProductVariant/54044216361328",
       "sku": "MELD-HDF-BLN-3J"
     }
   }
