@@ -69,7 +69,7 @@
     .breadcrumbs a:hover{color:var(--paper);}
     .breadcrumbs span.sep{opacity:0.45;}
     .breadcrumbs span.current{color:var(--paper);}
-    .hero-eyebrow{display:block;font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--red);margin-bottom:18px;}
+    .hero-eyebrow{display:block;font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:#DF5742;margin-bottom:18px;}
     .article-h1{font-family:var(--font-display);font-weight:600;font-size:var(--fs-h1);line-height:1.08;color:var(--paper);max-width:880px;margin-bottom:18px;}
     .article-deck{font-family:var(--font-mono);font-size:15px;font-weight:300;line-height:1.75;color:var(--paper-dim);max-width:680px;margin-bottom:26px;}
     .hero-trust-strip{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;}
@@ -99,7 +99,7 @@
     .answer-passage p{font-size:16px;color:var(--body-fg);line-height:1.75;margin-bottom:0;}
     .answer-passage p + p{margin-top:12px;}
     .callout{border:1px solid var(--body-border);border-left:3px solid var(--brass);border-radius:var(--radius-md);padding:22px 24px;margin:24px 0;background:#FAFAFA;}
-    .callout .callout-label{font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;display:block;}
+    .callout .callout-label{font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#906A3F;margin-bottom:8px;display:block;}
     .callout p{margin-bottom:0;font-size:15.5px;}
     .callout p + p{margin-top:12px;}
     .article-figure{margin:28px 0;}
@@ -172,13 +172,13 @@
     .footer-wordmark{font-family:'DM Sans',system-ui,sans-serif;font-weight:600;font-size:22px;letter-spacing:0.20em;color:#FFFFFF;text-transform:uppercase;margin-bottom:14px;}
     .footer-wordmark-dot{color:var(--red);letter-spacing:0;margin-left:-0.05em;}
     .footer-tagline{font-family:var(--font-mono);font-size:14px;color:var(--paper-dim);line-height:1.8;}
-    .footer-col-head{font-family:var(--font-mono);font-size:12px;letter-spacing:0.18em;color:rgba(239,233,219,0.35);text-transform:uppercase;margin-bottom:18px;}
+    .footer-col-head{font-family:var(--font-mono);font-size:12px;letter-spacing:0.18em;color:rgba(239,233,219,0.51);text-transform:uppercase;margin-bottom:18px;}
     .footer-links{display:flex;flex-direction:column;gap:10px;}
     .footer-links a{font-family:var(--font-mono);font-size:14px;color:var(--paper-dim);transition:color .15s;}
     .footer-links a:hover{color:var(--paper);}
     .footer-bottom{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;flex-wrap:wrap;}
-    .footer-imprint-code{font-family:var(--font-mono);font-size:10px;letter-spacing:0.18em;color:var(--red);text-transform:uppercase;margin-bottom:12px;}
-    .footer-imprint{font-family:var(--font-mono);font-size:12px;color:rgba(239,233,219,0.28);line-height:1.9;}
+    .footer-imprint-code{font-family:var(--font-mono);font-size:10px;letter-spacing:0.18em;color:#DF5742;text-transform:uppercase;margin-bottom:12px;}
+    .footer-imprint{font-family:var(--font-mono);font-size:12px;color:rgba(239,233,219,0.51);line-height:1.9;}
     .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--ink);border-top:1px solid var(--hairline);transform:translateY(100%);transition:transform .3s ease;display:none;}
     .sticky-bar.show{transform:translateY(0);}
     .sticky-bar-inner{max-width:var(--container);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
@@ -287,6 +287,7 @@
 <p class="last-reviewed">Last reviewed: June 2026</p>
 </div>
 </header>
+<main>
 <div class="article-layout">
 <article class="article-body">
 <p>Both MELD and Hairo are press-on powder concealers for men that cover thinning areas for thicker-looking, fuller-looking hair. They occupy the same product space and target the same customer: men who want fast, discreet coverage that washes out with shampoo. Because they are so similar in format, the actual decision comes down to the details. Hold, shade options, the guarantee, shipping, and how much you pay. This guide compares both products on the points that matter, using only what each brand publishes, and it includes an honest section on when Hairo might still be the better choice for you.</p>
@@ -432,6 +433,7 @@
 <p class="fc-foot">60-day money-back. Free Shade Swap. Ships in a plain unbranded box.</p>
 </div>
 </section>
+</main>
 <footer class="site-footer" id="footer">
 <div class="footer-inner">
 <div class="footer-top">
@@ -476,7 +478,7 @@
 </div>
 </div>
 </footer>
-<div aria-hidden="true" class="sticky-bar" id="stickyBar">
+<div aria-hidden="true" class="sticky-bar" id="stickyBar" inert>
 <div class="sticky-bar-inner">
 <p class="sticky-copy"><strong>MELD Hair Density Filler</strong> · Buy 2 Get 1 Free · $46</p>
 <a class="sticky-cta" href="/" id="stickyCta">Shop · $46</a>
@@ -500,8 +502,8 @@
   if(hero && bar && 'IntersectionObserver' in window){
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){
-        if(!en.isIntersecting){ bar.classList.add('show'); bar.removeAttribute('aria-hidden'); }
-        else { bar.classList.remove('show'); bar.setAttribute('aria-hidden','true'); }
+        if(!en.isIntersecting){ bar.classList.add('show'); bar.removeAttribute('aria-hidden'); bar.inert = false; }
+        else { bar.classList.remove('show'); bar.setAttribute('aria-hidden','true'); bar.inert = true; }
       });
     }, { threshold: 0.05 });
     io.observe(hero);

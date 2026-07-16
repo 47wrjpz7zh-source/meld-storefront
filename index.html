@@ -94,19 +94,38 @@
     /* ============================================================
        PROMO BAR - TOP ANNOUNCEMENT (single source of truth; mirrors sticky bar)
     ============================================================ */
-    .promo-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 101; height: 36px; background: var(--red); display: flex; align-items: center; justify-content: center; padding: 0 16px; }
+    .promo-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 101;
+      height: 40px;
+      background: linear-gradient(180deg, #C13B24 0%, var(--red) 55%, #8E2717 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.28);
+      border-bottom: 1px solid #FFE08A;
+      display: flex; align-items: center; justify-content: center; padding: 0 16px;
+    }
     .promo-bar-inner { display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.06em; color: #FFFFFF; text-align: center; }
     .promo-bar-text strong { font-weight: 600; }
-    .promo-bar-countdown { font-variant-numeric: tabular-nums; font-weight: 600; color: #FFE08A; letter-spacing: 0.08em; }
+    .promo-bar-countdown {
+      font-variant-numeric: tabular-nums; font-weight: 600; color: #FFE08A; letter-spacing: 0.08em;
+      padding: 3px 10px; border-radius: 999px;
+      background: rgba(255,224,138,0.14); border: 1px solid rgba(255,224,138,0.30);
+    }
     .promo-bar.promo-highlight { background: var(--ink); }
     .promo-bar.promo-highlight .promo-bar-text { color: #FFE08A; }
+    @keyframes promoPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,224,138,0.35); }
+      50% { box-shadow: 0 0 0 4px rgba(255,224,138,0); }
+    }
+    .promo-bar.promo-highlight .promo-bar-countdown { animation: promoPulse 2s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .promo-bar.promo-highlight .promo-bar-countdown { animation: none; }
+    }
     @media (max-width: 560px) { .promo-bar-inner { font-size: 11px; gap: 8px; } }
     @media (max-width: 480px) { .promo-bar .promo-offer { display: none; } }
 
     /* ============================================================
        NAV - DARK CHROME
     ============================================================ */
-    .site-nav { position: fixed; top: 36px; left: 0; right: 0; z-index: 100; height: 62px; background: var(--ink); border-bottom: 1px solid var(--hairline); }
+    .site-nav { position: fixed; top: 40px; left: 0; right: 0; z-index: 100; height: 62px; background: var(--ink); border-bottom: 1px solid var(--hairline); }
     .nav-inner { max-width: var(--container); margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
     .nav-wordmark { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 0.20em; color: #FFFFFF; text-transform: uppercase; }
     .nav-wordmark-dot { color: var(--red); letter-spacing: 0; margin-left: -0.05em; }
@@ -120,7 +139,7 @@
     /* ============================================================
        HERO - DARK CHROME + PRODUCT PAGE LAYOUT
     ============================================================ */
-    .hero { background: var(--ink); padding-top: 98px; display: flex; flex-direction: column; }
+    .hero { background: var(--ink); padding-top: 102px; display: flex; flex-direction: column; }
     .hero-body {
       max-width: var(--container);
       margin: 0 auto;
@@ -215,7 +234,7 @@
     .plan-supply { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--paper-dim); }
     .plan-feature { font-family: var(--font-body); font-size: 12px; color: var(--paper-dim); display: flex; align-items: center; gap: 5px; }
     .plan-feature::before { content: '✓'; color: var(--brass); font-size: 10px; }
-    .plan-save-tag { display: inline-block; margin-top: 6px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.10em; color: var(--red); border: 1px solid rgba(178,50,30,0.30); padding: 2px 8px; align-self: flex-start; border-radius: var(--radius-sm); }
+    .plan-save-tag { display: inline-block; margin-top: 6px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.10em; color: #E4715F; border: 1px solid rgba(178,50,30,0.30); padding: 2px 8px; align-self: flex-start; border-radius: var(--radius-sm); }
 
     /* Free gifts */
     .free-gifts { display: flex; flex-direction: column; gap: 10px; }
@@ -226,7 +245,7 @@
     .free-gift.highlight svg, .free-gift.highlight .free-gift-name { color: var(--paper); stroke: var(--paper); }
     .free-gift svg { width: 20px; height: 20px; stroke: var(--paper-dim); fill: none; stroke-width: 1.5; }
     .free-gift-name { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; color: var(--paper-dim); line-height: 1.4; }
-    .free-gift-val { font-family: var(--font-mono); font-size: 9px; color: var(--paper-dim); opacity: 0.55; text-decoration: line-through; }
+    .free-gift-val { font-family: var(--font-mono); font-size: 9px; color: var(--paper-dim); opacity: 0.71; text-decoration: line-through; }
     .free-gift-free { font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: 0.12em; color: var(--paper); }
 
     /* Add to cart CTA */
@@ -286,7 +305,7 @@
     .step-cell > img { border-radius: var(--radius-lg); }
     .step-img-ph { width: 100%; aspect-ratio: 4/3; background: #DEDAD3; display: flex; align-items: center; justify-content: center; margin-bottom: 28px; border-radius: var(--radius-lg); }
     .step-img-ph .ph-label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; color: rgba(26,26,26,0.22); text-transform: uppercase; text-align: center; line-height: 1.8; }
-    .step-numeral { font-family: var(--font-display); font-size: 52px; font-weight: 300; font-style: italic; color: var(--body-border); line-height: 1; margin-bottom: 24px; }
+    .step-numeral { font-family: var(--font-display); font-size: 52px; font-weight: 300; font-style: italic; color: #929292; line-height: 1; margin-bottom: 24px; }
     .step-title { font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--body-fg); line-height: 1.25; margin-bottom: 12px; }
     .step-body { font-family: var(--font-body); font-size: var(--fs-caption); color: var(--body-fg-2); line-height: 1.75; }
 
@@ -421,14 +440,14 @@
     .footer-wordmark { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 0.20em; color: #FFFFFF; text-transform: uppercase; margin-bottom: 14px; }
     .footer-wordmark-dot { color: var(--red); letter-spacing: 0; margin-left: -0.05em; }
     .footer-tagline { font-family: var(--font-mono); font-size: 14px; color: var(--paper-dim); line-height: 1.8; }
-    .footer-col-head { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; color: rgba(239,233,219,0.35); text-transform: uppercase; margin-bottom: 18px; }
+    .footer-col-head { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; color: rgba(239,233,219,0.51); text-transform: uppercase; margin-bottom: 18px; }
     .footer-links { display: flex; flex-direction: column; gap: 10px; }
     .footer-links a { font-family: var(--font-mono); font-size: 14px; color: var(--paper-dim); transition: color 0.15s; }
     .footer-links a:hover { color: var(--paper); }
     .footer-bottom { display: flex; align-items: flex-start; justify-content: space-between; gap: 28px; flex-wrap: wrap; }
     .footer-imprint-code { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; color: var(--red); text-transform: uppercase; margin-bottom: 12px; }
     .footer-imprint { font-family: var(--font-mono); font-size: 12px; color: rgba(239,233,219,0.28); line-height: 1.9; }
-    .footer-private { color: rgba(239,233,219,0.14); font-size: 11px; letter-spacing: 0.08em; }
+    .footer-private { color: rgba(239,233,219,0.51); font-size: 11px; letter-spacing: 0.08em; }
 
     /* ============================================================
        STICKY CTA BAR
@@ -492,7 +511,7 @@
        before/after load hardening
     ============================================================ */
     .hero-lede { display: none; }
-    .hero-lede-kicker { font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 9px; }
+    .hero-lede-kicker { font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #DF5742; margin-bottom: 9px; }
     .hero-lede-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(29px, 8.2vw, 36px); line-height: 1.06; color: var(--paper); letter-spacing: -0.01em; }
     .hero-lede-sub { font-family: var(--font-body); font-size: 15px; line-height: 1.5; color: var(--paper-dim); margin-top: 11px; }
 
@@ -640,13 +659,14 @@
 <a aria-label="MELD home" class="nav-wordmark" href="/">MELD<span class="nav-wordmark-dot">.</span></a>
 <div class="nav-right">
 <a class="nav-link" href="#how-it-works">How it works</a>
-<a aria-label="Cart" class="nav-cart" href="#hero">
+<a class="nav-cart" href="#hero">
 <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" x2="21" y1="6" y2="6"></line><path d="M16 10a4 4 0 01-8 0"></path></svg>
 <span data-cart-count="">Cart (0)</span>
 </a>
 </div>
 </div>
 </nav>
+<main>
 <!-- ================================================================
      HERO - PRODUCT PAGE LAYOUT
 ================================================================ -->
@@ -678,30 +698,30 @@
 </div>
 <!-- Thumb 2: video -->
 <div aria-label="Application video" class="gallery-thumb" data-index="1" role="listitem" tabindex="0">
-<img alt="Application video" class="active" decoding="async" height="1800" loading="lazy" src="images/video-thumb.webp" width="1800"/>
+<img alt="Application video" class="active" data-full="images/video-thumb.webp" decoding="async" height="240" loading="lazy" src="images/video-thumb-sm.webp" width="240"/>
 <div aria-hidden="true" class="thumb-play-badge">
 <svg viewbox="0 0 36 36"><circle cx="18" cy="18" fill="rgba(26,26,26,0.55)" r="17"></circle><polygon fill="rgba(239,233,219,0.7)" points="14,11 28,18 14,25"></polygon></svg>
 </div>
 </div>
 <!-- Thumb 3: application close-up -->
 <div aria-label="Application demo" class="gallery-thumb" data-index="2" role="listitem" tabindex="0">
-<img alt="Application demo" class="active" decoding="async" height="1800" loading="lazy" src="images/apply-demo.webp" width="1800"/>
+<img alt="Application demo" class="active" data-full="images/apply-demo.webp" decoding="async" height="240" loading="lazy" src="images/apply-demo-sm.webp" width="240"/>
 </div>
 <!-- Thumb 4: lifestyle marble -->
 <div aria-label="Lifestyle on marble surface" class="gallery-thumb" data-index="3" role="listitem" tabindex="0">
-<img alt="MELD compact on marble surface" class="active" decoding="async" height="1792" loading="lazy" src="images/lifestyle-marble.webp" width="2400"/>
+<img alt="MELD compact on marble surface" class="active" data-full="images/lifestyle-marble.webp" decoding="async" height="240" loading="lazy" src="images/lifestyle-marble-sm.webp" width="240"/>
 </div>
 <!-- Thumb 5: lifestyle wood -->
 <div aria-label="Lifestyle on wood surface" class="gallery-thumb" data-index="4" role="listitem" tabindex="0">
-<img alt="MELD compact on wood surface" class="active" decoding="async" height="1344" loading="lazy" src="images/lifestyle-wood.webp" width="1800"/>
+<img alt="MELD compact on wood surface" class="active" data-full="images/lifestyle-wood.webp" decoding="async" height="240" loading="lazy" src="images/lifestyle-wood-sm.webp" width="240"/>
 </div>
 <!-- Thumb 6: macro label detail -->
 <div aria-label="Macro label detail" class="gallery-thumb" data-index="5" role="listitem" tabindex="0">
-<img alt="MELD compact macro label detail" class="active" decoding="async" height="1800" loading="lazy" src="images/jar-5-macro.webp" width="1800"/>
+<img alt="MELD compact macro label detail" class="active" data-full="images/jar-5-macro.webp" decoding="async" height="240" loading="lazy" src="images/jar-5-macro-sm.webp" width="240"/>
 </div>
 <!-- Thumb 7: lifestyle nightstand scene -->
 <div aria-label="Lifestyle on wooden nightstand" class="gallery-thumb" data-index="6" role="listitem" tabindex="0">
-<img alt="MELD compact on wooden nightstand with towel and plant" class="active" decoding="async" height="1536" loading="lazy" src="images/lifestyle-nightstand.webp" width="2752"/>
+<img alt="MELD compact on wooden nightstand with towel and plant" class="active" data-full="images/lifestyle-nightstand.webp" decoding="async" height="240" loading="lazy" src="images/lifestyle-nightstand-sm.webp" width="240"/>
 </div>
 </div>
 </div>
@@ -759,7 +779,7 @@
 <!-- Plan A: B2G1. NOT the default (Daniel 2026-07-14): defaulting cold traffic into the
                3-jar bundle burns all 500 jars for $4,195 of contribution vs $10,750+ as singles.
                The bundle only ever made sense as a subscription, and that was never built. -->
-<button aria-label="Buy 2 Get 1 Free" aria-pressed="false" class="plan-btn" data-plan="a" id="planA">
+<button aria-pressed="false" class="plan-btn" data-plan="a" id="planA">
 <span class="plan-name">Buy 2 Get 1 Free</span>
 <span class="plan-price-row">
 <span class="plan-price">$15</span>
@@ -774,7 +794,7 @@
 <!-- Plan B: 1 Jar. THE DEFAULT (Daniel 2026-07-14). Lowest-risk entry for a first-time
                buyer of an unknown brand, and the best use of a 500-jar test batch: $21.60
                contribution per jar vs $8.44 in the bundle. -->
-<button aria-label="1 Jar" aria-pressed="true" class="plan-btn selected" data-plan="b" id="planB">
+<button aria-pressed="true" class="plan-btn selected" data-plan="b" id="planB">
 <span class="plan-name">1 Jar</span>
 <span class="plan-price-row">
 <span class="plan-price">$35</span>
@@ -819,7 +839,7 @@
 <!-- Rating at the decision point -->
 
 <!-- Add to Cart -->
-<button aria-label="Add to cart" class="buybox-cta" id="ctaBtn">
+<button class="buybox-cta" id="ctaBtn">
 <span id="ctaLabel">Add to Cart · Black</span>
 <span class="buybox-cta-sep">|</span>
 <span class="buybox-cta-price" id="ctaPrice">$46</span>
@@ -896,13 +916,13 @@
 </div>
 <div class="steps-row">
 <div class="step-cell">
-<img alt="Part hair to expose the thinning area" decoding="async" height="1200" loading="lazy" src="images/step-1.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px;display:block;" width="1600"/>
+<img alt="Part hair to expose the thinning area" decoding="async" height="788" loading="lazy" src="images/step-1.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px;display:block;" width="1050"/>
 <div aria-hidden="true" class="step-numeral">I</div>
 <h3 class="step-title">Part to the thinning area</h3>
 <p class="step-body">On dry hair, part or comb so the thinning area is exposed. Any length works. No prep product needed.</p>
 </div>
 <div class="step-cell">
-<img alt="MELD applicator pressed against the scalp at the crown, with dense full coverage" decoding="async" height="896" loading="lazy" src="images/step-2.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px;display:block;" width="1200"/>
+<img alt="MELD applicator pressed against the scalp at the crown, with dense full coverage" decoding="async" height="784" loading="lazy" src="images/step-2.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:28px;display:block;" width="1050"/>
 <div aria-hidden="true" class="step-numeral">II</div>
 <h3 class="step-title">Pull, dab, apply.</h3>
 <p class="step-body">Pull the applicator off the bottom of the jar. Dab the foam pad into the powder, then press it onto your scalp at the thinning area. One press lays down a full dose. No shaking, no mess.</p>
@@ -1067,15 +1087,15 @@
 </div>
 <div class="why-grid">
 <div class="why-card">
-<h4 class="why-title">60-day money-back guarantee</h4>
+<h3 class="why-title">60-day money-back guarantee</h3>
 <p class="why-body">Use it for two months. If it is not for you, email us for a full refund. No return required.</p>
 </div>
 <div class="why-card">
-<h4 class="why-title">Free shade swap</h4>
+<h3 class="why-title">Free shade swap</h3>
 <p class="why-body">Wrong shade? We send the right one free. You never eat the cost of matching your hair.</p>
 </div>
 <div class="why-card">
-<h4 class="why-title">US-made formula</h4>
+<h3 class="why-title">US-made formula</h3>
 <p class="why-body">The formula is developed in the United States and filled to spec. Sweat-resistant, washes out with shampoo.</p>
 </div>
 </div>
@@ -1278,6 +1298,7 @@
 </div>
 </div>
 </section>
+</main>
 <!-- ================================================================
      FOOTER - DARK CHROME
 ================================================================ -->
@@ -1330,7 +1351,7 @@
 <!-- ================================================================
      STICKY CTA BAR
 ================================================================ -->
-<div aria-hidden="true" class="sticky-bar" id="stickyBar">
+<div aria-hidden="true" class="sticky-bar" id="stickyBar" inert>
 <div class="sticky-bar-inner">
 <p class="sticky-copy"><strong id="stickyPromoText">MELD Hair Density Filler</strong> · Free US shipping · 60-day guarantee</p>
 <button class="sticky-cta" id="stickyCtaBtn">Add to Cart<span class="sticky-cta-price" id="stickyCtaPrice">$35</span></button>
@@ -1370,7 +1391,7 @@
       target.classList.add('active');
       var img = target.querySelector('img');
       if (img && img.src) {
-        mainImg.src = img.src;
+        mainImg.src = img.getAttribute('data-full') || img.src;
         mainImg.alt = img.alt || 'Product image';
         mainImg.setAttribute('data-thumb', String(idx));
       }
@@ -1506,8 +1527,8 @@
   var stickyBar = document.getElementById('stickyBar');
   var inlineCta = document.getElementById('ctaBtn');
   var mqMobile  = window.matchMedia('(max-width: 768px)');
-  function showSticky() { stickyBar.classList.add('show'); stickyBar.removeAttribute('aria-hidden'); }
-  function hideSticky() { stickyBar.classList.remove('show'); stickyBar.setAttribute('aria-hidden', 'true'); }
+  function showSticky() { stickyBar.classList.add('show'); stickyBar.removeAttribute('aria-hidden'); stickyBar.inert = false; }
+  function hideSticky() { stickyBar.classList.remove('show'); stickyBar.setAttribute('aria-hidden', 'true'); stickyBar.inert = true; }
   if (stickyBar && 'IntersectionObserver' in window) {
     if (heroEl) {
       var ioHero = new IntersectionObserver(function(entries) {
