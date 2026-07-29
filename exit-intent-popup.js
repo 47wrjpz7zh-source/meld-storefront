@@ -10,25 +10,31 @@
      also cached locally as a fallback so nothing is lost.
 
    GATE (Daniel): the code DISCOUNT_CODE below must exist as a real 10%-off
-   discount in Shopify Admin > Discounts. Until then it is a placeholder.
-   The capture only lands in Supabase + fires the welcome series once the
-   W5 "New Subscriber Welcome" n8n workflow is ACTIVATED (go-token).
+   discount in Shopify Admin > Discounts. The capture only lands in Supabase +
+   fires the welcome series once the W5 "New Subscriber Welcome" n8n workflow
+   is ACTIVATED (go-token). The popup works without W5; the email is cached
+   locally and the visitor still gets the code.
 
-   DISABLED 2026-07-28. The gate above was never met and then went stale:
-   MELD10 exists in Shopify but its status is EXPIRED (ended 2026-07-14), so
-   checkout REJECTS it. The popup was live on the homepage, promising leaving
-   visitors 10% off with a code that cannot be redeemed. Turned off at the
-   ENABLED flag below rather than by deleting the script, so re-enabling is a
-   single-word edit once a real, live 10% discount exists in Shopify.
+   HISTORY. Disabled 2026-07-28: MELD10 existed in Shopify but was EXPIRED
+   (ended 2026-07-14), so checkout rejected it, and the popup was promising
+   leaving visitors a code that could not be redeemed.
+   RE-ENABLED 2026-07-29. The gate is now met. Discount node
+   gid://shopify/DiscountCodeNode/1788428747120 was updated, not recreated:
+   end date cleared (status ACTIVE on a fresh re-pull) and scope widened from
+   the singles product only to ALL items, because the step-2 copy below
+   promises "every shade and bundle" and the old scope excluded the 3-pack.
+   Verified end to end on a live checkout, not just in the admin: bundle
+   $59.00, order discount MELD10 -$5.90, total $53.10.
    ============================================================ */
 (function () {
   'use strict';
 
-  /* ---- KILL SWITCH (2026-07-28) ----
-     Flip to true ONLY after a live (not expired) 10% discount matching
-     DISCOUNT_CODE exists in Shopify Admin > Discounts. Nothing else needs
-     to change: the whole popup is inert while this is false. */
-  var ENABLED = false;
+  /* ---- KILL SWITCH ----
+     Flip to false to make the whole popup inert; nothing else needs to change.
+     Flip back to true ONLY while a live (not expired) 10% discount matching
+     DISCOUNT_CODE exists in Shopify Admin > Discounts and covers every product
+     the step-2 copy claims it covers. */
+  var ENABLED = true;
   if (!ENABLED) return;
 
   var SUBSCRIBE_URL  = 'https://mysticstudio.app.n8n.cloud/webhook/meld/subscribe';
@@ -52,9 +58,15 @@
 
   function injectStyles() {
     var css =
+      /* pointer-events:none until .open is critical. The overlay is built on
+         DOMContentLoaded and sits full-viewport at z-index 9998; opacity:0
+         hides it but does NOT stop it receiving clicks, so without this it
+         swallows every click on the page (both buy buttons included) from
+         page load until the popup is triggered and closed. Verified by
+         hit-test on 2026-07-29. */
       '.meld-eip-overlay{position:fixed;inset:0;z-index:9998;display:flex;align-items:center;justify-content:center;' +
-      'background:rgba(20,16,14,0.62);opacity:0;transition:opacity .28s ease;padding:20px;}' +
-      '.meld-eip-overlay.open{opacity:1;}' +
+      'background:rgba(20,16,14,0.62);opacity:0;pointer-events:none;transition:opacity .28s ease;padding:20px;}' +
+      '.meld-eip-overlay.open{opacity:1;pointer-events:auto;}' +
       '.meld-eip-card{position:relative;width:100%;max-width:430px;background:#F7F4EF;border:1px solid rgba(26,26,26,0.12);' +
       'border-radius:14px;box-shadow:0 18px 60px rgba(20,16,14,0.32);padding:40px 34px 32px;' +
       'transform:translateY(14px);transition:transform .28s ease;font-family:Georgia,"Times New Roman",serif;}' +
