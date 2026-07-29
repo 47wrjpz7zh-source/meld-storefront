@@ -13,9 +13,23 @@
    discount in Shopify Admin > Discounts. Until then it is a placeholder.
    The capture only lands in Supabase + fires the welcome series once the
    W5 "New Subscriber Welcome" n8n workflow is ACTIVATED (go-token).
+
+   DISABLED 2026-07-28. The gate above was never met and then went stale:
+   MELD10 exists in Shopify but its status is EXPIRED (ended 2026-07-14), so
+   checkout REJECTS it. The popup was live on the homepage, promising leaving
+   visitors 10% off with a code that cannot be redeemed. Turned off at the
+   ENABLED flag below rather than by deleting the script, so re-enabling is a
+   single-word edit once a real, live 10% discount exists in Shopify.
    ============================================================ */
 (function () {
   'use strict';
+
+  /* ---- KILL SWITCH (2026-07-28) ----
+     Flip to true ONLY after a live (not expired) 10% discount matching
+     DISCOUNT_CODE exists in Shopify Admin > Discounts. Nothing else needs
+     to change: the whole popup is inert while this is false. */
+  var ENABLED = false;
+  if (!ENABLED) return;
 
   var SUBSCRIBE_URL  = 'https://mysticstudio.app.n8n.cloud/webhook/meld/subscribe';
   var DISCOUNT_CODE  = 'MELD10';          // <-- must match a real 10% Shopify discount

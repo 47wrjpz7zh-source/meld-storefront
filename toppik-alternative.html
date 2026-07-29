@@ -501,16 +501,32 @@
 <script>
   var SHOP_DOMAIN = 'shop.meldhair.com';
   var B2G1_BLACK = '54044216263024'; /* Phase 21 2026-07-16: B2G1 is now fixed-bundle product 15185853677936. The prior bundle variants were deleted; their cart permalinks return 410. KEEP IN SYNC: index.html VARIANT_MAP, variant-ids.json, meta-pixel.js, and the other 4 sub-pages. */
-  function cartUrl(vid){ return 'https://' + SHOP_DOMAIN + '/cart/' + vid + ':1'; }
+  /* skip_shop_pay=true: without it a bare cart permalink 302s through shop.app,
+     a THIRD domain the buyer never chose, before landing on shop.meldhair.com.
+     Same reason cart-drawer.js sets it. Verified 2026-07-14; added here 2026-07-28.
+     meldDecorateCheckout (meta-pixel.js) appends fbclid/_fbc/_fbp so the purchase
+     on the Shopify domain can be attributed back to this session. */
+  function cartUrl(vid){
+    var url = 'https://' + SHOP_DOMAIN + '/cart/' + vid + ':1?skip_shop_pay=true';
+    return window.meldDecorateCheckout ? window.meldDecorateCheckout(url) : url;
+  }
   function goB2G1(){ window.location.href = cartUrl(B2G1_BLACK); }
   ['railCta','stickyCta','inlineCta1','inlineCta2','finalCta'].forEach(function(id){
     var el = document.getElementById(id);
     if(!el) return;
+    /* Pixel hook. meta-pixel.js tracks InitiateCheckout on [data-meld-checkout];
+       its old selector list only held index.html's IDs, so nothing on this page
+       ever fired. Set here so it can never drift from the ID list above. */
+    el.setAttribute('data-meld-checkout', '');
     el.addEventListener('click', function(e){ e.preventDefault(); goB2G1(); });
     el.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); goB2G1(); } });
   });
   var navCart = document.querySelector('.nav-cart');
-  if(navCart){ navCart.addEventListener('click', function(e){ e.preventDefault(); window.location.href = 'https://' + SHOP_DOMAIN + '/cart'; }); }
+  if(navCart){ navCart.addEventListener('click', function(e){
+    e.preventDefault();
+    var url = 'https://' + SHOP_DOMAIN + '/cart?skip_shop_pay=true';
+    window.location.href = window.meldDecorateCheckout ? window.meldDecorateCheckout(url) : url;
+  }); }
   var hero = document.querySelector('.article-hero');
   var bar = document.getElementById('stickyBar');
   if(hero && bar && 'IntersectionObserver' in window){

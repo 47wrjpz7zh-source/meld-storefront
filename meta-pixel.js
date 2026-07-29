@@ -25,8 +25,14 @@
   var SHOP_DOMAIN = 'shop.meldhair.com';
   var CURRENCY    = 'USD';
 
-  // Buy CTAs that hand off to the Shopify cart (from index.html checkout wiring).
-  var CTA_SELECTORS = '#ctaBtn, #stickyCtaBtn, #orderCtaBtn, .nav-cart';
+  /* Buy CTAs that hand off to the Shopify cart.
+     - The three IDs are index.html's checkout wiring (unchanged).
+     - [data-meld-checkout] is the generic hook. Any page can mark a buy CTA
+       with that attribute and it is tracked, with no new IDs added here.
+       Added 2026-07-28: the 5 SEO sub-pages use their own IDs (railCta,
+       inlineCta1/2, finalCta, stickyCta), so an ID list could never match
+       them and InitiateCheckout never fired on any sub-page. */
+  var CTA_SELECTORS = '#ctaBtn, #stickyCtaBtn, #orderCtaBtn, .nav-cart, [data-meld-checkout]';
 
   // Plan -> price + variant map (mirror of index.html VARIANT_MAP / variant-ids.json).
   // KEEP IN SYNC: index.html VARIANT_MAP, variant-ids.json, and the 5 comparison
@@ -103,19 +109,41 @@
       currency: CURRENCY
     });
 
-    /* InitiateCheckout on any buy CTA that redirects to Shopify. */
-    document.querySelectorAll(CTA_SELECTORS).forEach(function (el) {
-      el.addEventListener('click', function () {
-        var v = currentVariantId();
-        fbq('track', 'InitiateCheckout', {
-          content_ids: v ? [v] : [],
-          content_type: 'product',
-          value: PLAN_PRICE[currentPlan()] || 59,
-          currency: CURRENCY,
-          num_items: currentPlan() === 'a' ? 3 : 1
-        });
+    /* InitiateCheckout on any buy CTA that hands off to Shopify.
+       Delegated on `document` in the CAPTURE phase, not bound per element, for
+       two reasons:
+         1. The sub-pages' own handlers call window.location.href on click. A
+            listener on the element itself races that navigation. A capture
+            listener on an ancestor always runs first, so the event is sent
+            before the page starts unloading.
+         2. It matches CTAs added after consent, and needs no re-binding. */
+    var lastEl = null, lastAt = 0;
+    function trackInitiateCheckout(el) {
+      var t = new Date().getTime();
+      if (el === lastEl && (t - lastAt) < 800) return; // keydown+click on one CTA = one event
+      lastEl = el; lastAt = t;
+      var v = currentVariantId();
+      fbq('track', 'InitiateCheckout', {
+        content_ids: v ? [v] : [],
+        content_type: 'product',
+        value: PLAN_PRICE[currentPlan()] || 59,
+        currency: CURRENCY,
+        num_items: currentPlan() === 'a' ? 3 : 1
       });
-    });
+    }
+    function matchCta(node) {
+      if (!node || typeof node.closest !== 'function') return null;
+      try { return node.closest(CTA_SELECTORS); } catch (e) { return null; }
+    }
+    document.addEventListener('click', function (e) {
+      var el = matchCta(e.target);
+      if (el) trackInitiateCheckout(el);
+    }, true);
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+      var el = matchCta(e.target);
+      if (el) trackInitiateCheckout(el);
+    }, true);
     /* NOTE: Purchase is NOT fired here. It fires server-side via Shopify CAPI
        on the checkout domain. The decorateCheckout bridge above carries
        fbclid/_fbc/_fbp across so CAPI can match the event to this session. */
