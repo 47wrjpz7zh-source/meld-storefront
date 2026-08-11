@@ -1,0 +1,7 @@
+# Stop shipping superseded page copies and local tooling to production.
+# Added 2026-08-11: 17 such files were publicly downloadable at HTTP 200,
+# six of them carrying testimonial copy removed from the live pages on 2026-07-15.
+*.bak
+_backup-*/
+*.test.mjs
+verify-deploy.mjs
